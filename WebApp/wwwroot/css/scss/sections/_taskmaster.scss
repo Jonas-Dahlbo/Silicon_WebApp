@@ -1,0 +1,43 @@
+.taskmaster {
+    .container{
+        display: block;
+        align-items: center;
+        margin-bottom: 60px;
+
+        img {
+            width: 100%;
+
+            @include lg {
+                width: auto;
+            }
+        }
+
+        @include lg {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .point-list-box {
+            display: block;
+
+            h2 {
+                margin-bottom: 30px;
+            }
+        
+            .img-then-text {
+                display: flex;
+                align-items:baseline;
+                gap: 10px;
+                
+                i {
+                    color: $theme;
+                }
+            }
+
+            .theme-btn {
+                margin-top: 20px;
+                width: 160px;
+            }
+        }
+    }
+}
