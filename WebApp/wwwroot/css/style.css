@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+﻿@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
 html, body {
   line-height: 160%;
   font-weight: 400;
@@ -197,7 +197,6 @@ h6, .h6 {
   text-decoration: none;
   background: #565973;
   color: #FFFFFF;
-  cursor: pointer;
 }
 
 .theme-s-btn {
@@ -217,10 +216,10 @@ h6, .h6 {
 }
 .theme-s-btn:hover {
   box-shadow: 0px 8px 18px -8px rgba(19, 16, 34, 0.15);
+  cursor: pointer;
   text-decoration: none;
   background: #565973;
   color: #FFFFFF;
-  cursor: pointer;
 }
 
 .gray-btn {
@@ -237,10 +236,10 @@ h6, .h6 {
   border: none;
 }
 .gray-btn:hover {
+  cursor: pointer;
   text-decoration: none;
   background: #565973;
   color: #FFFFFF;
-  cursor: pointer;
 }
 
 .btn-switch {
@@ -321,6 +320,7 @@ h6, .h6 {
   color: #33354D;
 }
 .btn-social:hover {
+  cursor: pointer;
   text-decoration: none;
   background: #565973;
   color: #FFFFFF;
@@ -776,6 +776,19 @@ header .container .menu-bars {
     text-align: start;
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
+}
+
+footer {
+  display: block;
+  text-align: center;
+  padding: 40px 0 20px inherit;
+  color: #9397AD;
+}
+footer .container .social-images {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
 }
 
 #light-dark-mode {
