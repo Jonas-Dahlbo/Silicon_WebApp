@@ -1,12 +1,8 @@
-﻿@{
-ViewData["Title"] = "Ultimate Task Manager";
-}
+﻿@model HomeIndexViewModel
 
-@await Html.PartialAsync("~/Views/Shared/Partials/_HeaderPartial.cshtml");
-@await Html.PartialAsync("~/Views/Shared/Partials/_ShowcasePartial.cshtml");
-@await Html.PartialAsync("~/Views/Shared/Partials/_FeaturesPartial.cshtml");
+@await Html.PartialAsync("~/Views/Shared/Partials/_ShowcasePartial.cshtml", Model.Showcase)
+@await Html.PartialAsync("~/Views/Shared/Partials/_FeaturesPartial.cshtml")
 <img id="light-dark-mode" src="~/images/light-dark-mode.svg" alt="Switch Between Light & Dark Mode">
-@await Html.PartialAsync("~/Views/Shared/Partials/_TaskmasterPartial.cshtml");
-@await Html.PartialAsync("~/Views/Shared/Partials/_DownloadAppPartial.cshtml");
-@await Html.PartialAsync("~/Views/Shared/Partials/_IntegrateToolsPartial.cshtml");
-@await Html.PartialAsync("~/Views/Shared/Partials/_FooterPartial.cshtml");
+@await Html.PartialAsync("~/Views/Shared/Partials/_TaskmasterPartial.cshtml")
+@await Html.PartialAsync("~/Views/Shared/Partials/_DownloadAppPartial.cshtml")
+@await Html.PartialAsync("~/Views/Shared/Partials/_IntegrateToolsPartial.cshtml")

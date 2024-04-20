@@ -192,9 +192,10 @@ h6, .h6 {
   background: #6366F1;
   color: #FFFFFF;
   border: none;
+  text-decoration: none;
+  cursor: pointer;
 }
 .theme-btn:hover {
-  text-decoration: none;
   background: #565973;
   color: #FFFFFF;
 }
@@ -213,11 +214,11 @@ h6, .h6 {
   color: #FFFFFF;
   padding-top: 10px;
   padding-bottom: 13px;
+  text-decoration: none;
+  cursor: pointer;
 }
 .theme-s-btn:hover {
   box-shadow: 0px 8px 18px -8px rgba(19, 16, 34, 0.15);
-  cursor: pointer;
-  text-decoration: none;
   background: #565973;
   color: #FFFFFF;
 }
@@ -234,10 +235,10 @@ h6, .h6 {
   background: #EFF2FC;
   color: #33354D;
   border: none;
+  text-decoration: none;
+  cursor: pointer;
 }
 .gray-btn:hover {
-  cursor: pointer;
-  text-decoration: none;
   background: #565973;
   color: #FFFFFF;
 }
@@ -304,7 +305,7 @@ h6, .h6 {
   border-radius: 50%;
 }
 
-.btn-social {
+.social-btn {
   line-height: 160%;
   font-weight: 400;
   color: #565973;
@@ -318,10 +319,10 @@ h6, .h6 {
   height: 44px;
   background-color: #EFF2FC;
   color: #33354D;
-}
-.btn-social:hover {
-  cursor: pointer;
   text-decoration: none;
+  cursor: pointer;
+}
+.social-btn:hover {
   background: #565973;
   color: #FFFFFF;
 }
@@ -781,7 +782,7 @@ header .container .menu-bars {
 footer {
   display: block;
   text-align: center;
-  padding: 40px 0 20px inherit;
+  padding: 60px 0 20px inherit;
   color: #9397AD;
 }
 footer .container .social-images {
