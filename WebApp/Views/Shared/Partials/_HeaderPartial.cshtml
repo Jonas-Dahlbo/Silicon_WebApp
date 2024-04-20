@@ -1,11 +1,11 @@
 ﻿<header>
     <div class="container">
-        <img class="logo" src="~/images/logo.svg" alt="Silicon Logo">
+        <a asp-controller="Home" asp-action="Index"><img class="logo" src="~/images/logo.svg" alt="Silicon Logo"></a>
         <div class="menu">
             <nav>
                 <a class="menu-link" href="#showcase">Overview</a>
-                <a class="menu-link" href="#Features">Features</a>
-                <a class="menu-link" href="contact.html">Contact</a>
+                <a class="menu-link" href="#features">Features</a>
+                <a class="menu-link" asp-controller="Contact" asp-action="Index">Contact</a>
             </nav>
         </div>
 

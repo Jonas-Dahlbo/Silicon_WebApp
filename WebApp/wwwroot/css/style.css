@@ -639,40 +639,42 @@ header .container .menu-bars {
   font-size: 16px !important;
 }
 
-.taskmaster .container {
+.taskmanager .container {
   display: block;
   align-items: center;
   margin-bottom: 60px;
 }
-.taskmaster .container img {
+.taskmanager .container img {
   width: 100%;
 }
 @media (min-width: 992px) {
-  .taskmaster .container img {
+  .taskmanager .container img {
     width: auto;
   }
 }
 @media (min-width: 992px) {
-  .taskmaster .container {
+  .taskmanager .container {
     display: flex;
     justify-content: space-between;
   }
 }
-.taskmaster .container .point-list-box {
+.taskmanager .container .bulletlist-box {
   display: block;
+  color: #565973;
 }
-.taskmaster .container .point-list-box h2 {
+.taskmanager .container .bulletlist-box h2 {
+  color: #0B0F19;
   margin-bottom: 30px;
 }
-.taskmaster .container .point-list-box .img-then-text {
+.taskmanager .container .bulletlist-box .bulletpoint {
   display: flex;
   align-items: baseline;
   gap: 10px;
 }
-.taskmaster .container .point-list-box .img-then-text i {
+.taskmanager .container .bulletlist-box .bulletpoint i {
   color: #6366F1;
 }
-.taskmaster .container .point-list-box .theme-btn {
+.taskmanager .container .bulletlist-box .theme-btn {
   margin-top: 20px;
   width: 160px;
 }
@@ -706,7 +708,7 @@ header .container .menu-bars {
   }
   .download-app .container .section-box img {
     padding-left: 0;
-    margin-top: 7px;
+    margin-top: 5px;
     margin-bottom: 10px;
   }
 }
@@ -733,12 +735,13 @@ header .container .menu-bars {
   }
 }
 .download-app .container .section-box .review-box {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   align-items: end;
   padding-top: 20px;
 }
 .download-app .container .section-box .review-box .review-text {
-  margin-right: 40px;
+  margin-right: 20px;
 }
 .download-app .container .section-box .review-box .review-text .store {
   color: #9397AD;
@@ -752,6 +755,15 @@ header .container .menu-bars {
   text-align: center;
   margin-top: 20px;
   margin-bottom: 40px;
+  line-height: 160%;
+  font-weight: 400;
+  color: #565973;
+  font-family: "Manrope", sans-serif;
+  font-size: 18px !important;
+  color: #9397AD;
+}
+.integrate-tools .container .section-title h1 {
+  color: #0B0F19;
 }
 @media (min-width: 992px) {
   .integrate-tools .container .section-title {
