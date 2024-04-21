@@ -35,5 +35,9 @@ form {
         padding: 5px;
         border-radius: 7px !important;
         border: 1px solid $gray-700;
+
+        &::placeholder {
+            opacity:50%;
+        }
     }
 }

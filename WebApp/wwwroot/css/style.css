@@ -178,6 +178,7 @@ h6, .h6 {
 .wrapper {
   display: grid;
   grid-template-rows: auto 1fr auto;
+  height: 100vh;
 }
 
 .theme-btn {
@@ -384,6 +385,49 @@ a:hover {
 .more-link:hover i {
   background: #33354D;
   color: #FFFFFF;
+}
+
+form {
+  width: 100%;
+  display: grid;
+  gap: 10px;
+}
+form .input-group {
+  display: grid;
+}
+form .checkbox-group {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 5px 0;
+  gap: 5px;
+}
+form .checkbox-group input[type=checkbox] {
+  height: 1rem;
+  width: 1rem;
+}
+form .checkbox-group label {
+  margin: 0;
+  font-weight: 400;
+}
+form label {
+  margin-bottom: 5px;
+  line-height: 160%;
+  font-weight: 400;
+  color: #565973;
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+  color: #0B0F19;
+  font-size: 16px !important;
+  font-weight: 700;
+}
+form input {
+  padding: 5px;
+  border-radius: 7px !important;
+  border: 1px solid #565973;
+}
+form input::placeholder {
+  opacity: 50%;
 }
 
 header {
@@ -807,7 +851,7 @@ header .container .menu-bars {
 footer {
   display: block;
   text-align: center;
-  padding: 60px 0 20px inherit;
+  padding: 60px 0 20px 0;
   color: #9397AD;
 }
 footer .container .social-images {
@@ -833,13 +877,16 @@ footer .container .social-images {
   display: grid;
   grid-template-columns: 1fr 3fr;
 }
-.newsletter .container form .newsletter-group {
+.newsletter .container form .news-box h5 {
+  align-self: center;
+}
+.newsletter .container form .news-box .newsletter-group {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   margin-top: 20px;
   margin-bottom: 20px;
 }
-.newsletter .container form .newsletter-group .checkbox-group label {
+.newsletter .container form .news-box .newsletter-group .checkbox-group label {
   line-height: 160%;
   font-weight: 400;
   color: #565973;
@@ -850,6 +897,30 @@ footer .container .social-images {
 .newsletter .container form .subscribe-email {
   display: flex;
   gap: 1rem;
+}
+
+.sign-up .container {
+  padding-top: 100px;
+  padding-bottom: 50px;
+  width: 55%;
+}
+.sign-up .container form {
+  justify-content: center;
+}
+.sign-up .container form h1 {
+  color: #0B0F19;
+}
+.sign-up .container form a {
+  color: #6366F1;
+  text-decoration: underline;
+}
+.sign-up .container form .create-account-form {
+  display: grid;
+}
+.sign-up .container form input {
+  padding: 10px;
+  border-radius: 7px !important;
+  border: 1px solid #565973;
 }
 
 #light-dark-mode {

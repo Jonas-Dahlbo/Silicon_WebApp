@@ -10,5 +10,5 @@ public class NewsletterViewModel
     public string FormTitle { get; set; } = null!;
     public List<string> CheckboxText { get; set; } =null!;
     public string Placeholder { get; set; } = null!;
-    public LinkViewModel Buttton { get; set; } = null!;
+    public LinkViewModel Button { get; set; } = null!;
 }

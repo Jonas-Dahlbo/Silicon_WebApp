@@ -1,4 +1,5 @@
 ﻿using WebApp.Models.Sections;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace WebApp.Models.Views;
 
@@ -76,5 +77,23 @@ public class HomeIndexViewModel
             new() {SectionImage = new() { ImageUrl = "images/tools/dropbox.svg", ImageAlt = "Dropbox" }, SectionText = "Ut in turpis consequat odio diam lectus elementum. Est faucibus blandit platea." },
             new() {SectionImage = new() { ImageUrl = "images/tools/evernote.svg", ImageAlt = "Evernote" }, SectionText = "Faucibus cursus maecenas lorem cursus nibh. Sociis sit risus id. Sit facilisis dolor arcu." },
             ]
+    };
+
+    public NewsletterViewModel Newsletter { get; set; } = new NewsletterViewModel
+    {
+        Id = "Newsletter",
+        Title = "Don't Want to Miss Anything?",
+        Image = new() { ImageUrl = "images/arrows.svg", ImageAlt = "Corkscrew arrow" },
+        FormTitle = "Sign up for Newsletters",
+        CheckboxText = [
+            "Daily Newsletter",
+            "Advertising Updates",
+            "Week in Review",
+            "Event Updates",
+            "Startups Weekly",
+            "Podcasts",
+            ],
+        Placeholder = "Your Email",
+        Button = new() { LinkType = "theme-btn", LinkText = "Subscribe*", ControllerName = "", ActionName = "" }
     };
 }

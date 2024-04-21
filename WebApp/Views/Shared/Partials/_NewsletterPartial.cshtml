@@ -12,14 +12,17 @@
 
 
                 <div class="newsletter-group">
-                    @foreach(var checkbox in Model.CheckboxText)
+                    @{int checkboxCount = 1;
+                    foreach(var checkbox in Model.CheckboxText)
                     {
                         <div class="newsletter-checkbox">
                             <div class="checkbox-group">
-                                <input type="checkbox" name="checkbox_1">
-                                <label for="checkbox_1">@checkbox</label>
+                                <input type="checkbox" name="checkbox_@checkboxCount">
+                                <label for="checkbox_@checkboxCount">@checkbox</label>
                             </div>
-                        </div>
+                            </div>
+                            checkboxCount += 1;
+                        }
                     }
                 </div>
             </div>
@@ -28,52 +31,8 @@
                 <div class="input-group">
                     <input type="text" placeholder="@Model.Placeholder">
                 </div>
-                <button class="@Model.Buttton.LinkType" type="submit">@Model.Buttton.LinkText</button>
+                <button class="@Model.Button.LinkType" type="submit">@Model.Button.LinkText</button>
             </div>
         </form>
     </div>
 </section>
-
-                            Don't Want to Miss Anything?
-                            /images/arrows.svg  Corkscrew arrow
-                            Sign up for Newsletters
-
-<div class="newsletter-checkbox">
-    <div class="checkbox-group">
-        <input type="checkbox" name="checkbox_1">
-        <label for="checkbox_1">Daily Newsletter</label>
-    </div>
-</div>
-<div class="newsletter-checkbox">
-    <div class="checkbox-group">
-        <input type="checkbox" name="checkbox_2">
-        <label for="checkbox_2">Advertising Updates</label>
-    </div>
-</div>
-<div class="newsletter-checkbox">
-    <div class="checkbox-group">
-        <input type="checkbox" name="checkbox_3">
-        <label for="checkbox_3">Week in Review</label>
-    </div>
-</div>
-<div class="newsletter-checkbox">
-    <div class="checkbox-group">
-        <input type="checkbox" name="checkbox_4">
-        <label for="checkbox_4">Event Updates</label>
-    </div>
-</div>
-<div class="newsletter-checkbox">
-    <div class="checkbox-group">
-        <input type="checkbox" name="checkbox_5">
-        <label for="checkbox_5">Startups Weekly</label>
-    </div>
-</div>
-<div class="newsletter-checkbox">
-    <div class="checkbox-group">
-        <input type="checkbox" name="checkbox_6">
-        <label for="checkbox_6">Podcasts</label>
-    </div>
-</div>
-
-        Subscribe*
-        theme-btn

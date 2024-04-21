@@ -1,0 +1,47 @@
+﻿@model SignUpViewModel
+
+<section class="sign-up">
+    <div class="container">
+         
+        <form method="post" asp-controller="Authentication" asp-action="SignUp" >
+            <h1>Create Account</h1>
+            <p>Already have an account? <a asp-controller="Authentication" asp-action="SignIn">Sign in here.</a></p>
+
+            <div class="create-account-form">
+                <div class="input-group">
+                    <label asp-for="FirstName"></label>
+                    <input asp-for="FirstName" />
+                    <span asp-validation-for="FirstName"></span>
+                </div>
+                <div class="input-group">
+                    <label asp-for="LastName"></label>
+                    <input asp-for="LastName" />
+                    <span asp-validation-for="LastName"></span>
+                </div>
+                <div class="input-group">
+                    <label asp-for="Email"></label>
+                    <input asp-for="Email" />
+                    <span asp-validation-for="Email"></span>
+                </div>
+                <div class="input-group">
+                    <label asp-for="Password"></label>
+                    <input asp-for="Password" />
+                    <span asp-validation-for="Password"></span>
+                </div>
+                <div class="input-group">
+                    <label asp-for="ConfirmPassword"></label>
+                    <input asp-for="ConfirmPassword" />
+                    <span asp-validation-for="ConfirmPassword"></span>
+                </div>
+                <div class="account-checkbox">
+                    <div class="checkbox-group">
+                        <input asp-for="TermsConfirmed" />
+                        <label asp-for="TermsConfirmed"></label>
+                    </div>
+                    <span asp-validation-for="TermsConfirmed"></span>
+                </div>
+                <button class="theme-s-btn" type="submit" asp-controller="Authentication" asp-action="SignUp">Sign Up</button>
+            </div>
+        </form>
+    </div>
+</section>

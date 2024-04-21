@@ -27,4 +27,5 @@ h6, .h6 { @include h6; }
 .wrapper {
     display: grid;
     grid-template-rows: auto 1fr auto;
+    height: 100vh;
 }

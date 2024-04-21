@@ -1,0 +1,30 @@
+.sign-up {
+    .container {
+        padding-top: 100px;
+        padding-bottom: 50px;
+        width: 55%;
+
+        form {
+            justify-content: center;
+
+            h1 {
+                color: $gray-900;
+            }
+
+            a {
+                color: $theme;
+                text-decoration: underline;
+            }
+
+            .create-account-form {
+                display: grid;
+            }
+
+            input {
+                padding: 10px;
+                border-radius: 7px !important;
+                border: 1px solid $gray-700;
+            }
+        }
+    }
+}

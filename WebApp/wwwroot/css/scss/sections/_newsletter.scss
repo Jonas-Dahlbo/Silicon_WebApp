@@ -14,19 +14,26 @@
             .news-box {
                 display: grid;
                 grid-template-columns: 1fr 3fr;
-            }
 
-            .newsletter-group {
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
-                margin-top: 20px;
-                margin-bottom: 20px;
+                h5 {
+                    align-self:center;
+                }
+                
+                .newsletter-group {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                    
+                    .checkbox-group {
+                        label {
+                            @include text-s;
+                            color: $gray-700;
 
-                .checkbox-group {
-                    label {
-                        @include text-s;
-                        color: $gray-700;
+                        }
+
                     }
+
                 }
             }
 
