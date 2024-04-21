@@ -1,0 +1,42 @@
+﻿@using WebApp.ViewModels.Sections
+@model SignInViewModel
+
+@{
+    ViewData["Title"] = "Sign In";
+}
+
+<section class="sign-in">
+    <div class="container">
+
+        <form method="post" asp-controller="Authentication" asp-action="SignUp">
+            <h1>Welcome Back</h1>
+            <p>Don’t have an account yet? <a asp-controller="Authentication" asp-action="SignUp">Sign up here.</a></p>
+
+            <div class="account-form">
+
+                <div class="input-group">
+                    <label asp-for="Email"></label>
+                    <input asp-for="Email" />
+                    <span asp-validation-for="Email"></span>
+                </div>
+                <div class="input-group">
+                    <label asp-for="Password"></label>
+                    <input asp-for="Password" />
+                    <span asp-validation-for="Password"></span>
+                </div>
+
+                <div class="remember-me">
+                    <div class="checkbox-group">
+                        <input asp-for="RememberMe" />
+                        <label asp-for="RememberMe"></label>
+                    </div>
+                </div>
+                <div class="error-message">
+                    @ViewData["ErrorMessage"]
+                </div>
+                <button class="theme-btn" type="submit" asp-controller="Authentication" asp-action="SignIn">Sign In</button>
+            </div>
+            <a id="forgot-pw" asp-controller="Home" asp-action="Index">Forgot your password?</a>
+        </form>
+    </div>
+</section>
