@@ -1,4 +1,5 @@
 ﻿using Infrastructure.Entities;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -22,6 +23,10 @@ namespace WebApp.Controllers
         [Route("/signup")]
         public IActionResult SignUp()
         {
+            if (_signInManager.IsSignedIn(User))
+            {
+                return RedirectToAction("Index", "Home");
+            }
             return View();
         }
 
@@ -57,7 +62,7 @@ namespace WebApp.Controllers
         [Route("/signin")]
         public IActionResult SignIn()
         {
-            if (User != null)
+            if (_signInManager.IsSignedIn(User))
             {
                 return RedirectToAction("Index", "Home");
             }
@@ -84,16 +89,12 @@ namespace WebApp.Controllers
 
         [HttpGet]
         [Route("/signout")]
-        public IActionResult SignOut()
+        public new async Task<IActionResult> SignOut()
         {
-            return View();
+            await _signInManager.SignOutAsync();
+            return RedirectToAction("Index", "Home");
         }
 
-        [HttpPost]
-        [Route("/signout")]
-        public IActionResult SignOut()
-        {
-            return View();
-        }
+
     }
 }
