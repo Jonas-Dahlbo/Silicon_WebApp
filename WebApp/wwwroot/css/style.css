@@ -810,15 +810,7 @@ footer {
   padding: 60px 0 20px inherit;
   color: #9397AD;
 }
-footer .container .hide {
-  display: none;
-}
-@media (min-width: 992px) {
-  footer .container .hide {
-    display: block;
-  }
-}
-footer .container #social-images {
+footer .container .social-images {
   display: flex;
   justify-content: center;
   gap: 15px;
