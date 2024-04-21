@@ -424,10 +424,17 @@ form label {
 form input {
   padding: 5px;
   border-radius: 7px !important;
-  border: 1px solid #565973;
+  border: 1px solid #B4B7C9;
 }
 form input::placeholder {
   opacity: 50%;
+}
+form .field-validation-error {
+  font-size: 12px;
+  font-weight: 500;
+  padding-top: 6px;
+  padding-left: 3px;
+  color: #EF4444;
 }
 
 header {
@@ -902,10 +909,11 @@ footer .container .social-images {
 .sign-up .container {
   padding-top: 100px;
   padding-bottom: 50px;
-  width: 55%;
+  width: 32%;
 }
 .sign-up .container form {
-  justify-content: center;
+  font-size: 16px;
+  font-weight: 400 !important;
 }
 .sign-up .container form h1 {
   color: #0B0F19;
@@ -916,11 +924,44 @@ footer .container .social-images {
 }
 .sign-up .container form .create-account-form {
   display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "firstname lastname" "email email" "password password" "confirm confirm" "terms terms" "btn btn";
+  gap: 20px;
 }
-.sign-up .container form input {
+.sign-up .container form .create-account-form #firstname {
+  grid-area: firstname;
+}
+.sign-up .container form .create-account-form #lastname {
+  grid-area: lastname;
+}
+.sign-up .container form .create-account-form #email {
+  grid-area: email;
+}
+.sign-up .container form .create-account-form #password {
+  grid-area: password;
+}
+.sign-up .container form .create-account-form #confirm {
+  grid-area: confirm;
+}
+.sign-up .container form .create-account-form #terms {
+  grid-area: terms;
+}
+.sign-up .container form .create-account-form .input-group input {
   padding: 10px;
-  border-radius: 7px !important;
-  border: 1px solid #565973;
+  font-size: 16px;
+  font-weight: 400 !important;
+}
+.sign-up .container form .account-checkbox {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.sign-up .container form .account-checkbox .checkbox-group {
+  gap: 10px;
+}
+.sign-up .container form button {
+  font-size: 16px;
+  font-weight: 400 !important;
+  grid-area: btn;
 }
 
 #light-dark-mode {

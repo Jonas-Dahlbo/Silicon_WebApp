@@ -2,10 +2,11 @@
     .container {
         padding-top: 100px;
         padding-bottom: 50px;
-        width: 55%;
+        width: 32%;
 
         form {
-            justify-content: center;
+            font-size: 16px;
+            font-weight: 400 !important;
 
             h1 {
                 color: $gray-900;
@@ -18,12 +19,59 @@
 
             .create-account-form {
                 display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-areas: "firstname lastname" "email email" "password password" "confirm confirm" "terms terms" "btn btn";
+                gap: 20px;
+
+                #firstname {
+                    grid-area: firstname;
+                }
+
+                #lastname {
+                    grid-area: lastname;
+                }
+
+                #email {
+                    grid-area: email;
+                }
+
+                #password {
+                    grid-area: password;
+                }
+
+                #confirm {
+                    grid-area: confirm;
+                }
+
+                #terms {
+                    grid-area: terms;
+                }
+
+
+                .input-group {
+                    input {
+                        padding: 10px;
+                        font-size: 16px;
+                        font-weight: 400 !important;
+                    }
+                }
             }
 
-            input {
-                padding: 10px;
-                border-radius: 7px !important;
-                border: 1px solid $gray-700;
+
+
+            .account-checkbox {
+                padding-top: 15px;
+                padding-bottom: 15px;
+
+                .checkbox-group {
+                    gap: 10px;
+                }
+            }
+
+            button {
+                font-size: 16px;
+                font-weight: 400 !important;
+                grid-area: btn;
             }
         }
     }

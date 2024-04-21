@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Infrastructure.Filters;
+using System.ComponentModel.DataAnnotations;
 
 namespace WebApp.Models.Sections;
 
@@ -34,8 +35,8 @@ public class SignUpViewModel
     [DataType(DataType.Password)]
     public string ConfirmPassword { get; set; } = null!;
 
-
-    [Required(ErrorMessage = "You must agree to the Terms & Conditions to Sign up")]
+    [Display(Name = "I agree to the Terms & Conditions.")]
+    [CheckboxRequired(ErrorMessage = "You must agree to the Terms & Conditions to Sign up")]
     public bool TermsConfirmed { get; set; }
 
 }
