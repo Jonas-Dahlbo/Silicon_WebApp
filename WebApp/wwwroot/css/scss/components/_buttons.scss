@@ -14,12 +14,12 @@
     background: $theme;
     color: $white;
     border: none;
+    text-decoration: none;
+    cursor: pointer;
 
     &:hover {
-        text-decoration: none;
         background: $gray-700;
         color: $white;
-        cursor:pointer;
     }
 }
 
@@ -30,13 +30,13 @@
     color: $white;
     padding-top: 10px;
     padding-bottom: 13px;
+    text-decoration: none;
+    cursor: pointer;
 
     &:hover {
         @include theme-secondary-shadow;
-        text-decoration: none;
         background: $gray-700;
         color: $white;
-        cursor: pointer;
     }
 }
 
@@ -45,12 +45,12 @@
     background: $gray-200;
     color: $gray-800;
     border: none;
+    text-decoration: none;
+    cursor: pointer;
 
     &:hover {
-        text-decoration: none;
         background: $gray-700;
         color: $white;
-        cursor: pointer;
     }
 }
 
@@ -121,7 +121,7 @@
     }
 }
 
-.btn-social {
+.social-btn {
     @include text-xl;
     display: flex;
     justify-content: center;
@@ -131,11 +131,11 @@
     height: 44px;
     background-color: $gray-200;
     color: $gray-800;
+    text-decoration: none;
+    cursor: pointer;
 
     &:hover {
-        text-decoration: none;
         background: $gray-700;
         color: $white;
-        cursor: pointer;
     }
 }

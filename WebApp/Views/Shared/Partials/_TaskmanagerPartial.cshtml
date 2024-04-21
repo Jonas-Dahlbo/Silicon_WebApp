@@ -1,0 +1,21 @@
+﻿@model TaskmanagerViewModel
+
+<section id="@Model.Id" class="taskmanager">
+    <div class="container">
+        <img src="@Model.TaskmangerImage.ImageUrl" alt="@Model.TaskmangerImage.ImageAlt">
+        <div class="bulletlist-box">
+            <h2>@Model.Title</h2>
+                @if(Model.Text != null)
+                {
+                    foreach(var paragraph in Model.Text)
+                    {
+                        <div class="bulletpoint">
+                            <i class="fa-regular fa-circle-check"></i>
+                            <p>@paragraph</p>
+                        </div>
+                    }
+                }
+            <a class="@Model.Link.LinkType" asp-controller="@Model.Link.ControllerName" asp-action="@Model.Link.ActionName">@Model.Link.LinkText <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>

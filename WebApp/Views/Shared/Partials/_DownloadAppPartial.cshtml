@@ -1,0 +1,28 @@
+﻿@model DownloadAppViewModel
+
+<section id="@Model.Id" class="download-app">
+    <div class="container">
+        <img src="@Model.DownloadAppImage.ImageUrl" alt="@Model.DownloadAppImage.ImageAlt">
+        <div class="section-box">
+            <h1>@Model.Title</h1>
+            <div class="review-box">
+                <div class="review-text">
+                    <p class="store">App store</p>
+                    <img src="@Model.StarsImage.ImageUrl" alt="@Model.StarsImage.ImageAlt">
+                    <h4>@Model.StoreBox[0].SectionTitle</h4>
+                    <p class="reviews">@Model.StoreBox[0].SectionText</p>
+                </div>
+                <a href="https://www.apple.com/se/app-store/"><img src="@Model.StoreBox[0].SectionImage.ImageUrl" alt="@Model.StoreBox[0].SectionImage.ImageAlt"></a>
+            </div>
+            <div class="review-box">
+                <div class="review-text">
+                    <p class="store">Google Play</p>
+                    <img src="@Model.StarsImage.ImageUrl" alt="@Model.StarsImage.ImageUrl">
+                    <h4>@Model.StoreBox[1].SectionTitle</h4>
+                    <p class="reviews">@Model.StoreBox[1].SectionTitle</p>
+                </div>
+                <a href="https://play.google.com/store"><img src="@Model.StoreBox[1].SectionImage.ImageUrl" alt="@Model.StoreBox[1].SectionImage.ImageAlt"></a>
+            </div>
+        </div>
+    </div>
+</section>

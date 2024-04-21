@@ -1,6 +1,8 @@
-@import './sections/header';
-@import './sections/showcase';
-@import './sections/features';
-@import './sections/taskmaster';
-@import './sections/downloadapp';
-@import './sections/integratetools';
+@import 'sections/_header.scss';
+@import 'sections/_showcase.scss';
+@import 'sections/_features.scss';
+@import 'sections/_taskmanager.scss';
+@import 'sections/_downloadapp.scss';
+@import 'sections/_integrate.scss';
+@import 'sections/_footer.scss';
+@import 'sections/_newsletter.scss';

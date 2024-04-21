@@ -10,28 +10,44 @@ header {
 
         @include lg {
             grid-template-columns: auto 1fr auto auto;
-            grid-template-areas: "logo menu switch buttons";
+            grid-template-areas: "logo navbar switch buttons";
         }
 
-        .logo { grid-area: logo; }
+        .hide {
+            display:none;
+            
+            @include lg {
+                display:block;
+            }
+        }
 
-        .menu {
-            grid-area: menu;
+        .logo {
+            grid-area: logo;
+        }
+
+        #menu {
+            grid-area: navbar;
             display: none;
 
             @include lg {
                 display: block;
             }
-            
+
             nav {
                 display: flex;
                 gap: 15px;
+
+                .menu-link {
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
             }
         }
-        
+
         .btn-switch {
             grid-area: switch;
-            
+
             label {
                 @include text-s;
 
@@ -41,7 +57,7 @@ header {
             }
         }
 
-        .account-buttons {
+        #account-buttons {
             grid-area: buttons;
             display: none;
             gap: 15px;
@@ -53,6 +69,8 @@ header {
 
         .menu-bars {
             font-size: 40px;
+            border: none;
+            background-color: transparent;
 
             @include lg {
                 display: none;

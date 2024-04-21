@@ -1,0 +1,22 @@
+﻿@model IntegrateViewModel
+
+<section class="integrate-tools">
+    <div class="container">
+        <div class="section-title">
+            <h1>@Model.SectionTitle.Title</h1>
+            <p>@Model.SectionTitle.Text</p>
+        </div>
+        <div class="tool-container">
+            @if (Model.SectionBoxes != null)
+            {
+                foreach(var box in Model.SectionBoxes)
+                {
+                    <div class="tool-box">
+                        <img src="@box.SectionImage.ImageUrl" alt="@box.SectionImage.ImageAlt">
+                        <p>@box.SectionText</p>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+</section>

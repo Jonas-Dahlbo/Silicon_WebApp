@@ -1,0 +1,28 @@
+﻿<header>
+    <div class="container">
+        <a asp-controller="Home" asp-action="Index"><img class="logo" src="~/images/logo.svg" alt="Silicon Logo"></a>
+        <div id="menu" class="hide">
+            <nav>
+                <a class="menu-link" asp-controller="Home" asp-action="Index" asp-fragment="showcase">Overview</a>
+                <a class="menu-link" asp-controller="Home" asp-action="Index" asp-fragment="features">Features</a>
+                <a class="menu-link" asp-controller="Contact" asp-action="Index">Contact</a>
+            </nav>
+        </div>
+
+        <div class="btn-switch">
+            <label>Light</label>
+            <label class="switch" for="switch-mode">
+                <input type="checkbox" id="switch-mode" />
+                <span class="slider round"></span>
+            </label>
+            <label>Dark</label>
+        </div>
+
+        <div id="account-buttons" class="hide">
+            <a class="gray-btn"><img src="~/images/icons/sign-in.svg"><span>Sign in</span></a>
+            <a class="theme-btn"><img src="~/images/icons/sign-up.svg"><span>Sign up</span></a>
+        </div>
+
+        <button class="menu-bars"><i class="fa-solid fa-bars-staggered"></i></button>
+    </div>
+</header>

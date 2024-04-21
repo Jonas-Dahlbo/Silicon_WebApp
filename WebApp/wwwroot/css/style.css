@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+﻿@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
 html, body {
   line-height: 160%;
   font-weight: 400;
@@ -192,9 +192,10 @@ h6, .h6 {
   background: #6366F1;
   color: #FFFFFF;
   border: none;
+  text-decoration: none;
+  cursor: pointer;
 }
 .theme-btn:hover {
-  text-decoration: none;
   background: #565973;
   color: #FFFFFF;
 }
@@ -213,10 +214,11 @@ h6, .h6 {
   color: #FFFFFF;
   padding-top: 10px;
   padding-bottom: 13px;
+  text-decoration: none;
+  cursor: pointer;
 }
 .theme-s-btn:hover {
   box-shadow: 0px 8px 18px -8px rgba(19, 16, 34, 0.15);
-  text-decoration: none;
   background: #565973;
   color: #FFFFFF;
 }
@@ -233,9 +235,10 @@ h6, .h6 {
   background: #EFF2FC;
   color: #33354D;
   border: none;
+  text-decoration: none;
+  cursor: pointer;
 }
 .gray-btn:hover {
-  text-decoration: none;
   background: #565973;
   color: #FFFFFF;
 }
@@ -302,7 +305,7 @@ h6, .h6 {
   border-radius: 50%;
 }
 
-.btn-social {
+.social-btn {
   line-height: 160%;
   font-weight: 400;
   color: #565973;
@@ -316,9 +319,10 @@ h6, .h6 {
   height: 44px;
   background-color: #EFF2FC;
   color: #33354D;
-}
-.btn-social:hover {
   text-decoration: none;
+  cursor: pointer;
+}
+.social-btn:hover {
   background: #565973;
   color: #FFFFFF;
 }
@@ -395,24 +399,35 @@ header .container {
 @media (min-width: 992px) {
   header .container {
     grid-template-columns: auto 1fr auto auto;
-    grid-template-areas: "logo menu switch buttons";
+    grid-template-areas: "logo navbar switch buttons";
+  }
+}
+header .container .hide {
+  display: none;
+}
+@media (min-width: 992px) {
+  header .container .hide {
+    display: block;
   }
 }
 header .container .logo {
   grid-area: logo;
 }
-header .container .menu {
-  grid-area: menu;
+header .container #menu {
+  grid-area: navbar;
   display: none;
 }
 @media (min-width: 992px) {
-  header .container .menu {
+  header .container #menu {
     display: block;
   }
 }
-header .container .menu nav {
+header .container #menu nav {
   display: flex;
   gap: 15px;
+}
+header .container #menu nav .menu-link:hover {
+  text-decoration: underline;
 }
 header .container .btn-switch {
   grid-area: switch;
@@ -433,18 +448,20 @@ header .container .btn-switch label {
     font-size: 16px !important;
   }
 }
-header .container .account-buttons {
+header .container #account-buttons {
   grid-area: buttons;
   display: none;
   gap: 15px;
 }
 @media (min-width: 992px) {
-  header .container .account-buttons {
+  header .container #account-buttons {
     display: flex;
   }
 }
 header .container .menu-bars {
   font-size: 40px;
+  border: none;
+  background-color: transparent;
 }
 @media (min-width: 992px) {
   header .container .menu-bars {
@@ -635,40 +652,42 @@ header .container .menu-bars {
   font-size: 16px !important;
 }
 
-.taskmaster .container {
+.taskmanager .container {
   display: block;
   align-items: center;
   margin-bottom: 60px;
 }
-.taskmaster .container img {
+.taskmanager .container img {
   width: 100%;
 }
 @media (min-width: 992px) {
-  .taskmaster .container img {
+  .taskmanager .container img {
     width: auto;
   }
 }
 @media (min-width: 992px) {
-  .taskmaster .container {
+  .taskmanager .container {
     display: flex;
     justify-content: space-between;
   }
 }
-.taskmaster .container .point-list-box {
+.taskmanager .container .bulletlist-box {
   display: block;
+  color: #565973;
 }
-.taskmaster .container .point-list-box h2 {
+.taskmanager .container .bulletlist-box h2 {
+  color: #0B0F19;
   margin-bottom: 30px;
 }
-.taskmaster .container .point-list-box .img-then-text {
+.taskmanager .container .bulletlist-box .bulletpoint {
   display: flex;
   align-items: baseline;
   gap: 10px;
 }
-.taskmaster .container .point-list-box .img-then-text i {
+.taskmanager .container .bulletlist-box .bulletpoint i {
   color: #6366F1;
 }
-.taskmaster .container .point-list-box .theme-btn {
+.taskmanager .container .bulletlist-box .theme-btn {
   margin-top: 20px;
   width: 160px;
 }
@@ -702,7 +721,7 @@ header .container .menu-bars {
   }
   .download-app .container .section-box img {
     padding-left: 0;
-    margin-top: 7px;
+    margin-top: 5px;
     margin-bottom: 10px;
   }
 }
@@ -729,12 +748,13 @@ header .container .menu-bars {
   }
 }
 .download-app .container .section-box .review-box {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   align-items: end;
   padding-top: 20px;
 }
 .download-app .container .section-box .review-box .review-text {
-  margin-right: 40px;
+  margin-right: 20px;
 }
 .download-app .container .section-box .review-box .review-text .store {
   color: #9397AD;
@@ -748,6 +768,15 @@ header .container .menu-bars {
   text-align: center;
   margin-top: 20px;
   margin-bottom: 40px;
+  line-height: 160%;
+  font-weight: 400;
+  color: #565973;
+  font-family: "Manrope", sans-serif;
+  font-size: 18px !important;
+  color: #9397AD;
+}
+.integrate-tools .container .section-title h1 {
+  color: #0B0F19;
 }
 @media (min-width: 992px) {
   .integrate-tools .container .section-title {
@@ -773,6 +802,54 @@ header .container .menu-bars {
     text-align: start;
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
+}
+
+footer {
+  display: block;
+  text-align: center;
+  padding: 60px 0 20px inherit;
+  color: #9397AD;
+}
+footer .container .social-images {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.newsletter {
+  background-color: #F3F6FF;
+}
+.newsletter .container {
+  width: 45%;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.newsletter .container .newsletter-title {
+  display: flex;
+  gap: 1rem;
+}
+.newsletter .container form .news-box {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+.newsletter .container form .newsletter-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.newsletter .container form .newsletter-group .checkbox-group label {
+  line-height: 160%;
+  font-weight: 400;
+  color: #565973;
+  font-family: "Manrope", sans-serif;
+  font-size: 14px !important;
+  color: #565973;
+}
+.newsletter .container form .subscribe-email {
+  display: flex;
+  gap: 1rem;
 }
 
 #light-dark-mode {
