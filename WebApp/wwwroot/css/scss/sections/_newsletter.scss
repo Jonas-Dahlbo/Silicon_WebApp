@@ -41,6 +41,11 @@
                 display: flex;
                 gap: 1rem;
             }
+            
+            p {
+                @include text-s;
+                color: $gray-600;
+            }
         }
     }
 }

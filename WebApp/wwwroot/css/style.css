@@ -6,6 +6,9 @@ html, body {
   font-family: "Manrope", sans-serif;
   font-size: 16px;
 }
+html a, body a {
+  color: #6366F1;
+}
 
 .text-xs {
   line-height: 160%;
@@ -424,10 +427,17 @@ form label {
 form input {
   padding: 5px;
   border-radius: 7px !important;
-  border: 1px solid #565973;
+  border: 1px solid #B4B7C9;
 }
 form input::placeholder {
   opacity: 50%;
+}
+form .field-validation-error {
+  font-size: 12px;
+  font-weight: 500;
+  padding-top: 6px;
+  padding-left: 3px;
+  color: #EF4444;
 }
 
 header {
@@ -500,16 +510,6 @@ header .container #account-buttons {
 @media (min-width: 992px) {
   header .container #account-buttons {
     display: flex;
-  }
-}
-header .container .menu-bars {
-  font-size: 40px;
-  border: none;
-  background-color: transparent;
-}
-@media (min-width: 992px) {
-  header .container .menu-bars {
-    display: none;
   }
 }
 
@@ -898,29 +898,121 @@ footer .container .social-images {
   display: flex;
   gap: 1rem;
 }
+.newsletter .container form p {
+  line-height: 160%;
+  font-weight: 400;
+  color: #565973;
+  font-family: "Manrope", sans-serif;
+  font-size: 14px !important;
+  color: #9397AD;
+}
 
 .sign-up .container {
   padding-top: 100px;
   padding-bottom: 50px;
-  width: 55%;
+  width: 32%;
 }
 .sign-up .container form {
-  justify-content: center;
+  font-size: 16px;
+  font-weight: 400 !important;
 }
 .sign-up .container form h1 {
   color: #0B0F19;
 }
-.sign-up .container form a {
-  color: #6366F1;
-  text-decoration: underline;
-}
-.sign-up .container form .create-account-form {
+.sign-up .container form .account-form {
   display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "firstname lastname" "email email" "password password" "confirm confirm" "terms terms" "btn btn";
+  gap: 20px;
 }
-.sign-up .container form input {
+.sign-up .container form .account-form #firstname {
+  grid-area: firstname;
+}
+.sign-up .container form .account-form #lastname {
+  grid-area: lastname;
+}
+.sign-up .container form .account-form #email {
+  grid-area: email;
+}
+.sign-up .container form .account-form #password {
+  grid-area: password;
+}
+.sign-up .container form .account-form #confirm {
+  grid-area: confirm;
+}
+.sign-up .container form .account-form #terms {
+  grid-area: terms;
+}
+.sign-up .container form .account-form .input-group input {
   padding: 10px;
-  border-radius: 7px !important;
-  border: 1px solid #565973;
+  font-size: 16px;
+  font-weight: 400 !important;
+}
+.sign-up .container form .account-checkbox {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.sign-up .container form .account-checkbox .checkbox-group {
+  gap: 10px;
+}
+.sign-up .container form button {
+  font-size: 16px;
+  font-weight: 400 !important;
+  width: 100%;
+  grid-area: btn;
+}
+
+.sign-in .container {
+  padding-top: 100px;
+  padding-bottom: 80px;
+  width: 32%;
+}
+.sign-in .container form {
+  font-size: 16px;
+  font-weight: 400 !important;
+}
+.sign-in .container form h1 {
+  color: #0B0F19;
+}
+.sign-in .container form .account-form {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.sign-in .container form .account-form .input-group {
+  margin-top: 20px;
+}
+.sign-in .container form .account-form .input-group input {
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 400 !important;
+}
+.sign-in .container form .remember-me {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.sign-in .container form .remember-me .checkbox-group {
+  gap: 10px;
+}
+.sign-in .container form .error-message {
+  margin-bottom: 10px;
+  line-height: 160%;
+  font-weight: 400;
+  color: #565973;
+  font-family: "Manrope", sans-serif;
+  font-size: 18px !important;
+  font-weight: 500;
+  color: #EF4444;
+  text-align: center;
+}
+.sign-in .container form button {
+  font-size: 16px;
+  font-weight: 400 !important;
+  width: 100%;
+}
+.sign-in .container form #forgot-pw {
+  margin-top: 13px;
+  text-decoration: none;
+  text-align: center;
 }
 
 #light-dark-mode {

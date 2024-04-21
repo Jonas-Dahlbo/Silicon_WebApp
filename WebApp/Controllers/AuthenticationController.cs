@@ -1,10 +1,23 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Infrastructure.Entities;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using WebApp.Models.Sections;
+using WebApp.ViewModels.Sections;
 
 namespace WebApp.Controllers
 {
     public class AuthenticationController : Controller
     {
+        private readonly UserManager<UserEntity> _userManager;
+        private readonly SignInManager<UserEntity> _signInManager;
+
+        public AuthenticationController(UserManager<UserEntity> userManager, SignInManager<UserEntity> signInManager = null)
+        {
+            _userManager = userManager;
+            _signInManager = signInManager;
+        }
+
         [HttpGet]
         [Route("/signup")]
         public IActionResult SignUp()
@@ -14,14 +27,73 @@ namespace WebApp.Controllers
 
         [HttpPost]
         [Route("/signup")]
-        public IActionResult SignUp(SignUpViewModel viewModel)
+        public async Task<IActionResult> SignUp(SignUpViewModel viewModel)
         {
             if (ModelState.IsValid)
             {
-                
+                var exists = await _userManager.Users.AnyAsync(x => x.Email == viewModel.Email);
+
+                if (!exists)
+                {
+                    var userEntity = new UserFactory().ReturnUserEntity(viewModel);
+                    
+                    var result = await _userManager.CreateAsync(userEntity, viewModel.Password);
+
+                    if (result.Succeeded)
+                    {
+                        return RedirectToAction("SignIn", "Authentication");
+                    }
+
+                }
+
+                ViewData["ErrorMessage"] = "Email already exists";
+                return View(viewModel);
             }
 
             return View(viewModel);
+        }
+        
+        [HttpGet]
+        [Route("/signin")]
+        public IActionResult SignIn()
+        {
+            if (User != null)
+            {
+                return RedirectToAction("Index", "Home");
+            }
+
+            return View();
+        }
+
+        [HttpPost]
+        [Route("/signin")]
+        public async Task<IActionResult> SignIn(SignInViewModel viewModel)
+        {
+            if (ModelState.IsValid)
+            {
+                var result = await _signInManager.PasswordSignInAsync(viewModel.Email, viewModel.Password, viewModel.RememberMe, false);
+                if (result.Succeeded)
+                {
+                    return RedirectToAction("Index", "Home");
+                }
+            }
+
+            ViewData["ErrorMessage"] = "Incorrect email or password";
+            return View(viewModel);
+        }
+
+        [HttpGet]
+        [Route("/signout")]
+        public IActionResult SignOut()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [Route("/signout")]
+        public IActionResult SignOut()
+        {
+            return View();
         }
     }
 }

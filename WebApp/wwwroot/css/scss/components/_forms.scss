@@ -34,10 +34,18 @@ form {
     input {
         padding: 5px;
         border-radius: 7px !important;
-        border: 1px solid $gray-700;
+        border: 1px solid $gray-500;
 
         &::placeholder {
             opacity:50%;
         }
+    }
+
+    .field-validation-error {
+        font-size: 12px;
+        font-weight:500;
+        padding-top: 6px;
+        padding-left: 3px;
+        color: $danger;
     }
 }

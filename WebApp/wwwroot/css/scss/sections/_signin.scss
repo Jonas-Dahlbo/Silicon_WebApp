@@ -1,7 +1,7 @@
-.sign-up {
+.sign-in {
     .container {
         padding-top: 100px;
-        padding-bottom: 50px;
+        padding-bottom: 80px;
         width: 32%;
 
         form {
@@ -15,36 +15,11 @@
 
             .account-form {
                 display: grid;
-                grid-template-columns: 1fr 1fr;
-                grid-template-areas: "firstname lastname" "email email" "password password" "confirm confirm" "terms terms" "btn btn";
-                gap: 20px;
-
-                #firstname {
-                    grid-area: firstname;
-                }
-
-                #lastname {
-                    grid-area: lastname;
-                }
-
-                #email {
-                    grid-area: email;
-                }
-
-                #password {
-                    grid-area: password;
-                }
-
-                #confirm {
-                    grid-area: confirm;
-                }
-
-                #terms {
-                    grid-area: terms;
-                }
-
+                grid-template-columns: 1fr;
 
                 .input-group {
+                    margin-top: 20px;
+
                     input {
                         padding: 10px;
                         font-size: 16px;
@@ -55,7 +30,7 @@
 
 
 
-            .account-checkbox {
+            .remember-me {
                 padding-top: 15px;
                 padding-bottom: 15px;
 
@@ -64,11 +39,24 @@
                 }
             }
 
+            .error-message {
+                margin-bottom: 10px;
+                @include text-lg;
+                font-weight: 500;
+                color: $danger;
+                text-align: center;
+            }
+
             button {
                 font-size: 16px;
                 font-weight: 400 !important;
                 width: 100%;
-                grid-area: btn;
+            }
+
+            #forgot-pw {
+                margin-top: 13px;
+                text-decoration: none;
+                text-align: center;
             }
         }
     }
