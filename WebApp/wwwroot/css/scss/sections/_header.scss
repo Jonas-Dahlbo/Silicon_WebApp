@@ -66,15 +66,5 @@ header {
                 display: flex;
             }
         }
-
-        .menu-bars {
-            font-size: 40px;
-            border: none;
-            background-color: transparent;
-
-            @include lg {
-                display: none;
-            }
-        }
     }
 }

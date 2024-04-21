@@ -3,16 +3,19 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using WebApp.Models.Sections;
+using WebApp.ViewModels.Sections;
 
 namespace WebApp.Controllers
 {
     public class AuthenticationController : Controller
     {
         private readonly UserManager<UserEntity> _userManager;
+        private readonly SignInManager<UserEntity> _signInManager;
 
-        public AuthenticationController(UserManager<UserEntity> userManager)
+        public AuthenticationController(UserManager<UserEntity> userManager, SignInManager<UserEntity> signInManager = null)
         {
             _userManager = userManager;
+            _signInManager = signInManager;
         }
 
         [HttpGet]
@@ -38,7 +41,7 @@ namespace WebApp.Controllers
 
                     if (result.Succeeded)
                     {
-                        return RedirectToAction("SignIn, Authentication");
+                        return RedirectToAction("SignIn", "Authentication");
                     }
 
                 }
@@ -48,6 +51,49 @@ namespace WebApp.Controllers
             }
 
             return View(viewModel);
+        }
+        
+        [HttpGet]
+        [Route("/signin")]
+        public IActionResult SignIn()
+        {
+            if (User != null)
+            {
+                return RedirectToAction("Index", "Home");
+            }
+
+            return View();
+        }
+
+        [HttpPost]
+        [Route("/signin")]
+        public async Task<IActionResult> SignIn(SignInViewModel viewModel)
+        {
+            if (ModelState.IsValid)
+            {
+                var result = await _signInManager.PasswordSignInAsync(viewModel.Email, viewModel.Password, viewModel.RememberMe, false);
+                if (result.Succeeded)
+                {
+                    return RedirectToAction("Index", "Home");
+                }
+            }
+
+            ViewData["ErrorMessage"] = "Incorrect email or password";
+            return View(viewModel);
+        }
+
+        [HttpGet]
+        [Route("/signout")]
+        public IActionResult SignOut()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [Route("/signout")]
+        public IActionResult SignOut()
+        {
+            return View();
         }
     }
 }
