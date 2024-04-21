@@ -399,24 +399,35 @@ header .container {
 @media (min-width: 992px) {
   header .container {
     grid-template-columns: auto 1fr auto auto;
-    grid-template-areas: "logo menu switch buttons";
+    grid-template-areas: "logo navbar switch buttons";
+  }
+}
+header .container .hide {
+  display: none;
+}
+@media (min-width: 992px) {
+  header .container .hide {
+    display: block;
   }
 }
 header .container .logo {
   grid-area: logo;
 }
-header .container .menu {
-  grid-area: menu;
+header .container #menu {
+  grid-area: navbar;
   display: none;
 }
 @media (min-width: 992px) {
-  header .container .menu {
+  header .container #menu {
     display: block;
   }
 }
-header .container .menu nav {
+header .container #menu nav {
   display: flex;
   gap: 15px;
+}
+header .container #menu nav .menu-link:hover {
+  text-decoration: underline;
 }
 header .container .btn-switch {
   grid-area: switch;
@@ -437,18 +448,20 @@ header .container .btn-switch label {
     font-size: 16px !important;
   }
 }
-header .container .account-buttons {
+header .container #account-buttons {
   grid-area: buttons;
   display: none;
   gap: 15px;
 }
 @media (min-width: 992px) {
-  header .container .account-buttons {
+  header .container #account-buttons {
     display: flex;
   }
 }
 header .container .menu-bars {
   font-size: 40px;
+  border: none;
+  background-color: transparent;
 }
 @media (min-width: 992px) {
   header .container .menu-bars {
@@ -797,11 +810,54 @@ footer {
   padding: 60px 0 20px inherit;
   color: #9397AD;
 }
-footer .container .social-images {
+footer .container .hide {
+  display: none;
+}
+@media (min-width: 992px) {
+  footer .container .hide {
+    display: block;
+  }
+}
+footer .container #social-images {
   display: flex;
   justify-content: center;
   gap: 15px;
   margin-bottom: 30px;
+}
+
+.newsletter {
+  background-color: #F3F6FF;
+}
+.newsletter .container {
+  width: 45%;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.newsletter .container .newsletter-title {
+  display: flex;
+  gap: 1rem;
+}
+.newsletter .container form .news-box {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+.newsletter .container form .newsletter-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.newsletter .container form .newsletter-group .checkbox-group label {
+  line-height: 160%;
+  font-weight: 400;
+  color: #565973;
+  font-family: "Manrope", sans-serif;
+  font-size: 14px !important;
+  color: #565973;
+}
+.newsletter .container form .subscribe-email {
+  display: flex;
+  gap: 1rem;
 }
 
 #light-dark-mode {
