@@ -1,4 +1,6 @@
-﻿<header>
+﻿@inject SignInManager<UserEntity> _signInManager
+
+<header>
     <div class="container">
         <a asp-controller="Home" asp-action="Index"><img class="logo" src="~/images/logo.svg" alt="Silicon Logo"></a>
         <div id="menu" class="hide">
@@ -19,8 +21,16 @@
         </div>
 
         <div id="account-buttons" class="hide">
-            <a class="gray-btn" asp-controller="Authentication" asp-action="SignIn"><img src="~/images/icons/sign-in.svg"><span>Sign in</span></a>
-            <a class="theme-btn" asp-controller="Authentication" asp-action="SignUp"><img src="~/images/icons/sign-up.svg"><span>Sign up</span></a>
-        </div>
+            @if(_signInManager.IsSignedIn(User))
+            {
+                <a asp-controller="Authentication" asp-action="SignOut"><img src="~/images/profile-mini.svg"></a>
+            }
+            else
+            {
+                <a class="gray-btn" asp-controller="Authentication" asp-action="SignIn"><img src="~/images/icons/sign-in.svg"><span>Sign in</span></a>
+                <a class="theme-btn" asp-controller="Authentication" asp-action="SignUp"><img src="~/images/icons/sign-up.svg"><span>Sign up</span></a>
+
+            }
+            </div>
     </div>
 </header>
