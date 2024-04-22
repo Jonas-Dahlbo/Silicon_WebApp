@@ -1015,6 +1015,133 @@ footer .container .social-images {
   text-align: center;
 }
 
+.profile-page .container {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  padding-left: 40px;
+}
+.profile-page .container .account-management {
+  padding-top: 20px;
+  padding-bottom: 40px;
+  display: block;
+  padding-right: 5px;
+  border-right: 1px solid #E2E5F1;
+}
+.profile-page .container .account-management .profile {
+  align-items: center;
+  text-align: center;
+}
+.profile-page .container .account-details {
+  padding-left: 40px;
+}
+.profile-page .container .info-form h5 {
+  color: #6366F1;
+}
+.profile-page .container .info-form label {
+  margin-bottom: 5px;
+  line-height: 160%;
+  font-weight: 400 !important;
+  color: #565973;
+  font-family: "Manrope", sans-serif;
+  font-weight: 800 !important;
+  color: #0B0F19;
+  font-size: 16px !important;
+  font-weight: 700;
+}
+.profile-page .container .info-form input {
+  padding: 10px;
+  border-radius: 7px !important;
+  border: 1px solid #E2E5F1 !important;
+}
+.profile-page .container .info-form .basic-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "firstname lastname" "email phone" "bio bio";
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.profile-page .container .info-form .basic-info .input-group {
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 400 !important;
+}
+.profile-page .container .info-form .basic-info #account-firstname {
+  grid-area: firstname;
+}
+.profile-page .container .info-form .basic-info #account-lastname {
+  grid-area: lastname;
+}
+.profile-page .container .info-form .basic-info #account-email {
+  grid-area: email;
+}
+.profile-page .container .info-form .basic-info #account-phone {
+  grid-area: phone;
+}
+.profile-page .container .info-form .basic-info #account-bio {
+  grid-area: bio;
+}
+.profile-page .container .info-form .basic-info #account-bio input {
+  height: 4rem;
+}
+.profile-page .container .info-form .save-changes {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  gap: 15px;
+}
+.profile-page .container .address-form h5 {
+  color: #6366F1;
+}
+.profile-page .container .address-form label {
+  margin-bottom: 5px;
+  line-height: 160%;
+  font-weight: 400 !important;
+  color: #565973;
+  font-family: "Manrope", sans-serif;
+  font-weight: 800 !important;
+  color: #0B0F19;
+  font-size: 16px !important;
+  font-weight: 700;
+}
+.profile-page .container .address-form input {
+  padding: 10px;
+  border-radius: 7px !important;
+  border: 1px solid #E2E5F1 !important;
+}
+.profile-page .container .address-form h5 {
+  padding-top: 20px;
+  border-top: 1px solid #E2E5F1;
+}
+.profile-page .container .address-form .address {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "primary primary" "secondary secondary" "postal city";
+  gap: 20px;
+}
+.profile-page .container .address-form .address .input-group {
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 400 !important;
+}
+.profile-page .container .address-form .address #account-primary-address {
+  grid-area: primary;
+}
+.profile-page .container .address-form .address #account-secondary-address {
+  grid-area: secondary;
+}
+.profile-page .container .address-form .address #account-postal-code {
+  grid-area: postal;
+}
+.profile-page .container .address-form .address #account-city {
+  grid-area: city;
+}
+.profile-page .container .address-form .save-changes {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  gap: 15px;
+}
+
 #light-dark-mode {
   width: 100%;
 }

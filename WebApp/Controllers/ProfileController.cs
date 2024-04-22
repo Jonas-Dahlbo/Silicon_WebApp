@@ -6,13 +6,13 @@ using WebApp.ViewModels.Views;
 
 namespace WebApp.Controllers
 {
-    public class AccountController : Controller
+    public class ProfileController : Controller
     {
 
         private readonly UserManager<UserEntity> _userManager;
         private readonly SignInManager<UserEntity> _signInManager;
 
-        public AccountController(UserManager<UserEntity> userManager, SignInManager<UserEntity> signInManager)
+        public ProfileController(UserManager<UserEntity> userManager, SignInManager<UserEntity> signInManager)
         {
             _userManager = userManager;
             _signInManager = signInManager;

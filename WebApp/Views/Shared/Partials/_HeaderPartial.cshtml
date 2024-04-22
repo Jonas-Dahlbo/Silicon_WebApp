@@ -23,7 +23,7 @@
         <div id="account-buttons" class="hide">
             @if(_signInManager.IsSignedIn(User))
             {
-                <a asp-controller="Authentication" asp-action="SignOut"><img src="~/images/profile-mini.svg"></a>
+                <a asp-controller="Profile" asp-action="Account"><img src="~/images/profile-mini.svg"></a>
             }
             else
             {

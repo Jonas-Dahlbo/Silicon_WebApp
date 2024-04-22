@@ -62,7 +62,7 @@ namespace WebApp.Controllers
         {
             if (_signInManager.IsSignedIn(User))
             {
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("Account", "Profile");
             }
 
             return View();
@@ -77,7 +77,7 @@ namespace WebApp.Controllers
                 var result = await _signInManager.PasswordSignInAsync(viewModel.Email, viewModel.Password, viewModel.RememberMe, false);
                 if (result.Succeeded)
                 {
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("Account", "Profile");
                 }
             }
 
