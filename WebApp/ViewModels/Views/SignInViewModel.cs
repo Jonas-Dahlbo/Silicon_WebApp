@@ -1,7 +1,6 @@
-﻿using Infrastructure.Filters;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
-namespace WebApp.ViewModels.Sections;
+namespace WebApp.ViewModels.Views;
 
 public class SignInViewModel
 {

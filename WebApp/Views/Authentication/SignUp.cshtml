@@ -1,4 +1,5 @@
-﻿@model SignUpViewModel
+﻿@using WebApp.ViewModels.Views
+@model SignUpViewModel
 @{
     ViewData["Title"] = "Create a new Account";
 }
@@ -16,7 +17,7 @@
                     <input asp-for="FirstName" />
                     <span asp-validation-for="FirstName"></span>
                 </div>
-                <div class="input-group" id="lasttname">
+                <div class="input-group" id="lastname">
                     <label asp-for="LastName"></label>
                     <input asp-for="LastName" />
                     <span asp-validation-for="LastName"></span>

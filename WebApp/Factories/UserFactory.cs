@@ -1,5 +1,5 @@
 ﻿using Infrastructure.Entities;
-using WebApp.Models.Sections;
+using WebApp.ViewModels.Views;
 
 public class UserFactory
 {

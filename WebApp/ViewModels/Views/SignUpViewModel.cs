@@ -1,7 +1,7 @@
 ﻿using Infrastructure.Filters;
 using System.ComponentModel.DataAnnotations;
 
-namespace WebApp.Models.Sections;
+namespace WebApp.ViewModels.Views;
 
 public class SignUpViewModel
 {
