@@ -3,14 +3,14 @@ $font-marope: 'Manrope', sans-serif;
 
 @mixin standard-text{
     line-height: 160%;
-    font-weight: 400;
+    font-weight: 400 !important;
     color: $gray-700;
     font-family: $font-marope;
 }
 
 @mixin standard-heading {
     @include standard-text();
-    font-weight: 800;
+    font-weight: 800 !important;
     color: $gray-900;
 }
 

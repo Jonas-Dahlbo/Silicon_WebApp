@@ -8,7 +8,7 @@ public class UserEntity : IdentityUser
     
     [ProtectedPersonalData]
     [StringLength(100)]
-    public string FirsName { get; set; } = null!;
+    public string FirstName { get; set; } = null!;
 
     [ProtectedPersonalData]
     [StringLength(100)]

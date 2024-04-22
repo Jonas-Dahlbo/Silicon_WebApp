@@ -7,7 +7,7 @@ public class UserFactory
     {
         var userEntity = new UserEntity
         {
-            FirsName = viewModel.FirstName,
+            FirstName = viewModel.FirstName,
             LastName = viewModel.LastName,
             Email = viewModel.Email,
             UserName = viewModel.Email,

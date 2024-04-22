@@ -1,7 +1,7 @@
 ﻿@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
 html, body {
   line-height: 160%;
-  font-weight: 400;
+  font-weight: 400 !important;
   color: #565973;
   font-family: "Manrope", sans-serif;
   font-size: 16px;
@@ -12,7 +12,7 @@ html a, body a {
 
 .text-xs {
   line-height: 160%;
-  font-weight: 400;
+  font-weight: 400 !important;
   color: #565973;
   font-family: "Manrope", sans-serif;
   font-size: 12px !important;
@@ -20,7 +20,7 @@ html a, body a {
 
 .text-s {
   line-height: 160%;
-  font-weight: 400;
+  font-weight: 400 !important;
   color: #565973;
   font-family: "Manrope", sans-serif;
   font-size: 14px !important;
@@ -28,7 +28,7 @@ html a, body a {
 
 .text-m {
   line-height: 160%;
-  font-weight: 400;
+  font-weight: 400 !important;
   color: #565973;
   font-family: "Manrope", sans-serif;
   font-size: 16px !important;
@@ -36,7 +36,7 @@ html a, body a {
 
 .text-lg {
   line-height: 160%;
-  font-weight: 400;
+  font-weight: 400 !important;
   color: #565973;
   font-family: "Manrope", sans-serif;
   font-size: 18px !important;
@@ -44,7 +44,7 @@ html a, body a {
 
 .text-xl {
   line-height: 160%;
-  font-weight: 400;
+  font-weight: 400 !important;
   color: #565973;
   font-family: "Manrope", sans-serif;
   font-size: 20px !important;
@@ -52,7 +52,7 @@ html a, body a {
 
 .text-lead {
   line-height: 160%;
-  font-weight: 400;
+  font-weight: 400 !important;
   color: #565973;
   font-family: "Manrope", sans-serif;
   font-size: 24px !important;
@@ -60,120 +60,120 @@ html a, body a {
 
 .d1 {
   line-height: 160%;
-  font-weight: 400;
+  font-weight: 400 !important;
   color: #565973;
   font-family: "Manrope", sans-serif;
-  font-weight: 800;
+  font-weight: 800 !important;
   color: #0B0F19;
   font-size: 80px !important;
 }
 
 .d2 {
   line-height: 160%;
-  font-weight: 400;
+  font-weight: 400 !important;
   color: #565973;
   font-family: "Manrope", sans-serif;
-  font-weight: 800;
+  font-weight: 800 !important;
   color: #0B0F19;
   font-size: 72px !important;
 }
 
 .d3 {
   line-height: 160%;
-  font-weight: 400;
+  font-weight: 400 !important;
   color: #565973;
   font-family: "Manrope", sans-serif;
-  font-weight: 800;
+  font-weight: 800 !important;
   color: #0B0F19;
   font-size: 64px !important;
 }
 
 .d4 {
   line-height: 160%;
-  font-weight: 400;
+  font-weight: 400 !important;
   color: #565973;
   font-family: "Manrope", sans-serif;
-  font-weight: 800;
+  font-weight: 800 !important;
   color: #0B0F19;
   font-size: 56px !important;
 }
 
 .d5 {
   line-height: 160%;
-  font-weight: 400;
+  font-weight: 400 !important;
   color: #565973;
   font-family: "Manrope", sans-serif;
-  font-weight: 800;
+  font-weight: 800 !important;
   color: #0B0F19;
   font-size: 48px !important;
 }
 
 .d6 {
   line-height: 160%;
-  font-weight: 400;
+  font-weight: 400 !important;
   color: #565973;
   font-family: "Manrope", sans-serif;
-  font-weight: 800;
+  font-weight: 800 !important;
   color: #0B0F19;
   font-size: 42px !important;
 }
 
 h1, .h1 {
   line-height: 160%;
-  font-weight: 400;
+  font-weight: 400 !important;
   color: #565973;
   font-family: "Manrope", sans-serif;
-  font-weight: 800;
+  font-weight: 800 !important;
   color: #0B0F19;
   font-size: 40px !important;
 }
 
 h2, .h2 {
   line-height: 160%;
-  font-weight: 400;
+  font-weight: 400 !important;
   color: #565973;
   font-family: "Manrope", sans-serif;
-  font-weight: 800;
+  font-weight: 800 !important;
   color: #0B0F19;
   font-size: 32px !important;
 }
 
 h3, .h3 {
   line-height: 160%;
-  font-weight: 400;
+  font-weight: 400 !important;
   color: #565973;
   font-family: "Manrope", sans-serif;
-  font-weight: 800;
+  font-weight: 800 !important;
   color: #0B0F19;
   font-size: 28px !important;
 }
 
 h4, .h4 {
   line-height: 160%;
-  font-weight: 400;
+  font-weight: 400 !important;
   color: #565973;
   font-family: "Manrope", sans-serif;
-  font-weight: 800;
+  font-weight: 800 !important;
   color: #0B0F19;
   font-size: 24px !important;
 }
 
 h5, .h5 {
   line-height: 160%;
-  font-weight: 400;
+  font-weight: 400 !important;
   color: #565973;
   font-family: "Manrope", sans-serif;
-  font-weight: 800;
+  font-weight: 800 !important;
   color: #0B0F19;
   font-size: 20px !important;
 }
 
 h6, .h6 {
   line-height: 160%;
-  font-weight: 400;
+  font-weight: 400 !important;
   color: #565973;
   font-family: "Manrope", sans-serif;
-  font-weight: 800;
+  font-weight: 800 !important;
   color: #0B0F19;
   font-size: 16px !important;
 }
@@ -254,7 +254,7 @@ h6, .h6 {
 }
 .btn-switch label {
   line-height: 160%;
-  font-weight: 400;
+  font-weight: 400 !important;
   color: #565973;
   font-family: "Manrope", sans-serif;
   font-size: 16px;
@@ -311,7 +311,7 @@ h6, .h6 {
 
 .social-btn {
   line-height: 160%;
-  font-weight: 400;
+  font-weight: 400 !important;
   color: #565973;
   font-family: "Manrope", sans-serif;
   font-size: 20px !important;
@@ -333,7 +333,7 @@ h6, .h6 {
 
 a {
   line-height: 160%;
-  font-weight: 400;
+  font-weight: 400 !important;
   color: #565973;
   font-family: "Manrope", sans-serif;
   color: #6366F1;
@@ -346,7 +346,7 @@ a:hover {
 
 .menu-link {
   line-height: 160%;
-  font-weight: 400;
+  font-weight: 400 !important;
   color: #565973;
   font-family: "Manrope", sans-serif;
   font-size: 16px;
@@ -363,7 +363,7 @@ a:hover {
 
 .more-link {
   line-height: 160%;
-  font-weight: 400;
+  font-weight: 400 !important;
   color: #565973;
   font-family: "Manrope", sans-serif;
   font-size: 14px !important;
@@ -416,10 +416,10 @@ form .checkbox-group label {
 form label {
   margin-bottom: 5px;
   line-height: 160%;
-  font-weight: 400;
+  font-weight: 400 !important;
   color: #565973;
   font-family: "Manrope", sans-serif;
-  font-weight: 800;
+  font-weight: 800 !important;
   color: #0B0F19;
   font-size: 16px !important;
   font-weight: 700;
@@ -488,7 +488,7 @@ header .container .btn-switch {
 }
 header .container .btn-switch label {
   line-height: 160%;
-  font-weight: 400;
+  font-weight: 400 !important;
   color: #565973;
   font-family: "Manrope", sans-serif;
   font-size: 14px !important;
@@ -496,7 +496,7 @@ header .container .btn-switch label {
 @media (min-width: 992px) {
   header .container .btn-switch label {
     line-height: 160%;
-    font-weight: 400;
+    font-weight: 400 !important;
     color: #565973;
     font-family: "Manrope", sans-serif;
     font-size: 16px !important;
@@ -558,20 +558,20 @@ header .container #account-buttons {
 }
 .showcase .container .content h1 {
   line-height: 160%;
-  font-weight: 400;
+  font-weight: 400 !important;
   color: #565973;
   font-family: "Manrope", sans-serif;
-  font-weight: 800;
+  font-weight: 800 !important;
   color: #0B0F19;
   font-size: 32px !important;
 }
 @media (min-width: 992px) {
   .showcase .container .content h1 {
     line-height: 160%;
-    font-weight: 400;
+    font-weight: 400 !important;
     color: #565973;
     font-family: "Manrope", sans-serif;
-    font-weight: 800;
+    font-weight: 800 !important;
     color: #0B0F19;
     font-size: 56px !important;
   }
@@ -579,7 +579,7 @@ header .container #account-buttons {
 .showcase .container .content p {
   margin: 20px 0 40px 0;
   line-height: 160%;
-  font-weight: 400;
+  font-weight: 400 !important;
   color: #565973;
   font-family: "Manrope", sans-serif;
   font-size: 16px !important;
@@ -588,7 +588,7 @@ header .container #account-buttons {
   .showcase .container .content p {
     margin: 40px 0 50px 0;
     line-height: 160%;
-    font-weight: 400;
+    font-weight: 400 !important;
     color: #565973;
     font-family: "Manrope", sans-serif;
     font-size: 18px !important;
@@ -681,16 +681,16 @@ header .container #account-buttons {
 }
 .features .container .tool-features .box h5 {
   line-height: 160%;
-  font-weight: 400;
+  font-weight: 400 !important;
   color: #565973;
   font-family: "Manrope", sans-serif;
-  font-weight: 800;
+  font-weight: 800 !important;
   color: #0B0F19;
   font-size: 20px !important;
 }
 .features .container .tool-features .box p {
   line-height: 160%;
-  font-weight: 400;
+  font-weight: 400 !important;
   color: #565973;
   font-family: "Manrope", sans-serif;
   font-size: 16px !important;
@@ -772,10 +772,10 @@ header .container #account-buttons {
 .download-app .container .section-box h1 {
   text-align: center;
   line-height: 160%;
-  font-weight: 400;
+  font-weight: 400 !important;
   color: #565973;
   font-family: "Manrope", sans-serif;
-  font-weight: 800;
+  font-weight: 800 !important;
   color: #0B0F19;
   font-size: 32px !important;
 }
@@ -783,10 +783,10 @@ header .container #account-buttons {
   .download-app .container .section-box h1 {
     text-align: start;
     line-height: 160%;
-    font-weight: 400;
+    font-weight: 400 !important;
     color: #565973;
     font-family: "Manrope", sans-serif;
-    font-weight: 800;
+    font-weight: 800 !important;
     color: #0B0F19;
     font-size: 40px !important;
   }
@@ -813,7 +813,7 @@ header .container #account-buttons {
   margin-top: 20px;
   margin-bottom: 40px;
   line-height: 160%;
-  font-weight: 400;
+  font-weight: 400 !important;
   color: #565973;
   font-family: "Manrope", sans-serif;
   font-size: 18px !important;
@@ -888,7 +888,7 @@ footer .container .social-images {
 }
 .newsletter .container form .news-box .newsletter-group .checkbox-group label {
   line-height: 160%;
-  font-weight: 400;
+  font-weight: 400 !important;
   color: #565973;
   font-family: "Manrope", sans-serif;
   font-size: 14px !important;
@@ -900,7 +900,7 @@ footer .container .social-images {
 }
 .newsletter .container form p {
   line-height: 160%;
-  font-weight: 400;
+  font-weight: 400 !important;
   color: #565973;
   font-family: "Manrope", sans-serif;
   font-size: 14px !important;
@@ -996,7 +996,7 @@ footer .container .social-images {
 .sign-in .container form .error-message {
   margin-bottom: 10px;
   line-height: 160%;
-  font-weight: 400;
+  font-weight: 400 !important;
   color: #565973;
   font-family: "Manrope", sans-serif;
   font-size: 18px !important;
