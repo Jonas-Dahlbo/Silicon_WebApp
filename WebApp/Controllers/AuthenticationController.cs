@@ -1,10 +1,8 @@
 ﻿using Infrastructure.Entities;
-using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using WebApp.Models.Sections;
-using WebApp.ViewModels.Sections;
+using WebApp.ViewModels.Views;
 
 namespace WebApp.Controllers
 {
@@ -13,7 +11,7 @@ namespace WebApp.Controllers
         private readonly UserManager<UserEntity> _userManager;
         private readonly SignInManager<UserEntity> _signInManager;
 
-        public AuthenticationController(UserManager<UserEntity> userManager, SignInManager<UserEntity> signInManager = null)
+        public AuthenticationController(UserManager<UserEntity> userManager, SignInManager<UserEntity> signInManager)
         {
             _userManager = userManager;
             _signInManager = signInManager;
