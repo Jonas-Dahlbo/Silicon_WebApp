@@ -18,7 +18,7 @@ namespace WebApp.Controllers
             {
                 if (!_signInManager.IsSignedIn(User))
                 {
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("SignIn", "Authentication");
                 }
                 var viewModel = new CoursesViewModel();
 
