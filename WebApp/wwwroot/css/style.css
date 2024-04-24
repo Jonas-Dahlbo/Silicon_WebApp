@@ -5,6 +5,7 @@ html, body {
   color: #565973;
   font-family: "Manrope", sans-serif;
   font-size: 16px;
+  font-family: "Manrope", sans-serif !important;
 }
 html a, body a {
   color: #6366F1;
@@ -632,40 +633,34 @@ header .container #account-buttons {
 .features .container .tool-features {
   margin-top: 20px;
   display: grid;
-}
-@media (min-width: 992px) {
-  .features .container .tool-features {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
+  grid-template-columns: 1fr 1fr 1fr;
 }
 .features .container .tool-features .box {
   padding: 20px;
   border: 1px solid #E2E5F1;
   transition: all 0.2s ease-in-out;
 }
-@media (min-width: 992px) {
-  .features .container .tool-features .box:nth-child(1) {
-    border-top: 0px solid #E2E5F1;
-    border-left: 0px solid #E2E5F1;
-  }
-  .features .container .tool-features .box:nth-child(2) {
-    border-top: 0px solid #E2E5F1;
-  }
-  .features .container .tool-features .box:nth-child(3) {
-    border-top: 0px solid #E2E5F1;
-    border-right: 0px solid #E2E5F1;
-  }
-  .features .container .tool-features .box:nth-child(4) {
-    border-bottom: 0px solid #E2E5F1;
-    border-left: 0px solid #E2E5F1;
-  }
-  .features .container .tool-features .box:nth-child(5) {
-    border-bottom: 0px solid #E2E5F1;
-  }
-  .features .container .tool-features .box:nth-child(6) {
-    border-bottom: 0px solid #E2E5F1;
-    border-right: 0px solid #E2E5F1;
-  }
+.features .container .tool-features .box:nth-child(1) {
+  border-top: 0px solid #E2E5F1;
+  border-left: 0px solid #E2E5F1;
+}
+.features .container .tool-features .box:nth-child(2) {
+  border-top: 0px solid #E2E5F1;
+}
+.features .container .tool-features .box:nth-child(3) {
+  border-top: 0px solid #E2E5F1;
+  border-right: 0px solid #E2E5F1;
+}
+.features .container .tool-features .box:nth-child(4) {
+  border-bottom: 0px solid #E2E5F1;
+  border-left: 0px solid #E2E5F1;
+}
+.features .container .tool-features .box:nth-child(5) {
+  border-bottom: 0px solid #E2E5F1;
+}
+.features .container .tool-features .box:nth-child(6) {
+  border-bottom: 0px solid #E2E5F1;
+  border-right: 0px solid #E2E5F1;
 }
 .features .container .tool-features .box:hover {
   transition: all 0.2s ease-in-out;
@@ -1053,6 +1048,12 @@ footer .container .social-images {
   border-radius: 7px !important;
   border: 1px solid #E2E5F1 !important;
 }
+.profile-page .container .info-form textarea {
+  padding: 10px;
+  border-radius: 7px !important;
+  border: 1px solid #E2E5F1 !important;
+  resize: none;
+}
 .profile-page .container .info-form .basic-info {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1140,6 +1141,131 @@ footer .container .social-images {
   margin-top: 20px;
   margin-bottom: 20px;
   gap: 15px;
+}
+
+.courses {
+  line-height: 160%;
+  font-weight: 400 !important;
+  color: #565973;
+  font-family: "Manrope", sans-serif;
+}
+.courses h1 {
+  color: #0B0F19;
+}
+.courses h5 {
+  color: #33354D;
+}
+.courses .container .courses-title-box .title {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  grid-template-areas: "nav nav nav" "title title search";
+}
+.courses .container .courses-title-box .title .courses-nav {
+  display: flex;
+  grid-area: nav;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+.courses .container .courses-title-box .title .courses-nav p {
+  margin-bottom: 0;
+}
+.courses .container .courses-title-box .title .courses-nav p i {
+  font-size: 10px;
+}
+.courses .container .courses-title-box .title .courses-nav p a {
+  color: #6366F1;
+  text-decoration: none;
+}
+.courses .container .courses-title-box .title .courses-title {
+  grid-area: title;
+}
+.courses .container .courses-title-box .title .search-box {
+  grid-area: search;
+}
+.courses .container .courses-title-box .title .search-box select {
+  color: #565973;
+  padding: 10px;
+  border-radius: 7px;
+  width: 15rem;
+  border: 1px solid #E2E5F1;
+  outline: none;
+}
+.courses .container .courses-title-box .title .search-box input {
+  padding: 10px;
+  border-radius: 7px;
+  width: 15rem;
+  border: 1px solid #E2E5F1;
+  background-image: url(/images/icons/bx-search.svg);
+  background-position: 95%;
+  background-repeat: no-repeat;
+}
+.courses .container .courses-content-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 25px;
+}
+.courses .container .courses-content-box .course-content {
+  margin-bottom: 10px;
+  border-radius: 15px;
+  border: 1px outset #EFF2FC;
+}
+.courses .container .courses-content-box .course-content .image {
+  position: relative;
+}
+.courses .container .courses-content-box .course-content .image .bookmark {
+  position: absolute;
+  top: 7%;
+  left: 5%;
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+}
+.courses .container .courses-content-box .course-content .image .bookmark p {
+  background-color: #22C55E;
+  color: #FFFFFF;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 7px;
+}
+.courses .container .courses-content-box .course-content .image img {
+  width: auto;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.courses .container .courses-content-box .course-content .course-info {
+  padding: 15px;
+}
+.courses .container .courses-content-box .course-content .course-info .course-title {
+  border-bottom: 1px solid #E2E5F1;
+  padding-left: 7px;
+  padding-right: 7px;
+}
+.courses .container .courses-content-box .course-content .course-info .course-title .price-box {
+  display: flex;
+  gap: 10px;
+}
+.courses .container .courses-content-box .course-content .course-info .course-title .price-box .discount-price {
+  color: #EF4444;
+}
+.courses .container .courses-content-box .course-content .course-info .course-title .price-box .price {
+  color: #6366F1;
+}
+.courses .container .courses-content-box .course-content .course-info .course-title .price-box .line-through-price {
+  text-decoration: line-through;
+  color: #9397AD;
+}
+.courses .container .courses-content-box .course-content .course-info .course-likes {
+  display: flex;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  gap: 20px;
+  color: #9397AD;
+}
+.courses .container .courses-content-box .course-content .course-info .course-likes .likes {
+  display: flex;
+}
+.courses .container .courses-content-box .course-content .course-info .course-likes .likes img {
+  margin-right: 5px;
 }
 
 #light-dark-mode {

@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <None Include="compilerconfig.json" />
+    <None Include="wwwroot\images\Courses\course1.svg" />
   </ItemGroup>
 
   <ItemGroup>

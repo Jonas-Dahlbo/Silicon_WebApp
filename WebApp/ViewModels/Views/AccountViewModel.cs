@@ -26,7 +26,7 @@ public class AccountViewModel
 
     [Display(Name = "Bio", Prompt = "Add a short bio...")]
     [Required(ErrorMessage = "A valid Email Address must be entered")]
-    [DataType(DataType.Text)]
+    [DataType(DataType.MultilineText)]
     public string Bio { get; set; } = null!;
 
     [Display(Name = "Address line 1", Prompt = "Enter your address line")]
