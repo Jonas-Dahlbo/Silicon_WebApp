@@ -6,26 +6,24 @@ using WebApp.ViewModels.Views;
 
 namespace WebApp.Controllers
 {
-    public class AuthenticationController : Controller
+    public class AuthenticationController(UserManager<UserEntity> userManager, SignInManager<UserEntity> signInManager) : Controller
     {
-        private readonly UserManager<UserEntity> _userManager;
-        private readonly SignInManager<UserEntity> _signInManager;
-
-        public AuthenticationController(UserManager<UserEntity> userManager, SignInManager<UserEntity> signInManager)
-        {
-            _userManager = userManager;
-            _signInManager = signInManager;
-        }
+        private readonly UserManager<UserEntity> _userManager = userManager;
+        private readonly SignInManager<UserEntity> _signInManager = signInManager;
 
         [HttpGet]
         [Route("/signup")]
         public IActionResult SignUp()
         {
-            if (_signInManager.IsSignedIn(User))
+            if (ModelState.IsValid)
             {
-                return RedirectToAction("Index", "Home");
+                if (_signInManager.IsSignedIn(User))
+                {
+                    return RedirectToAction("Index", "Home");
+                }
+                return View();
             }
-            return View();
+            return RedirectToAction("Index", "Home");
         }
 
         [HttpPost]
@@ -60,12 +58,16 @@ namespace WebApp.Controllers
         [Route("/signin")]
         public IActionResult SignIn()
         {
-            if (_signInManager.IsSignedIn(User))
+            if (!ModelState.IsValid)
             {
-                return RedirectToAction("Account", "Profile");
-            }
+                if (_signInManager.IsSignedIn(User))
+                {
+                    return RedirectToAction("Account", "Profile");
+                }
 
-            return View();
+                return View();
+            }
+            return RedirectToAction("Index", "Home");
         }
 
         [HttpPost]
@@ -89,8 +91,12 @@ namespace WebApp.Controllers
         [Route("/signout")]
         public new async Task<IActionResult> SignOut()
         {
-            await _signInManager.SignOutAsync();
-            return RedirectToAction("Index", "Home");
+            if (!ModelState.IsValid)
+            {
+                await _signInManager.SignOutAsync();
+                return RedirectToAction("Index", "Home");
+            }
+            return RedirectToAction("Account", "Profile");
         }
 
 
