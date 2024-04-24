@@ -14,7 +14,7 @@ namespace WebApp.Controllers
         [Route("/courses")]
         public IActionResult Index()
         {
-            if (!ModelState.IsValid)
+            if (ModelState.IsValid)
             {
                 if (!_signInManager.IsSignedIn(User))
                 {

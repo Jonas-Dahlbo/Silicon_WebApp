@@ -58,7 +58,7 @@ namespace WebApp.Controllers
         [Route("/signin")]
         public IActionResult SignIn()
         {
-            if (!ModelState.IsValid)
+            if (ModelState.IsValid)
             {
                 if (_signInManager.IsSignedIn(User))
                 {
@@ -91,7 +91,7 @@ namespace WebApp.Controllers
         [Route("/signout")]
         public new async Task<IActionResult> SignOut()
         {
-            if (!ModelState.IsValid)
+            if (ModelState.IsValid)
             {
                 await _signInManager.SignOutAsync();
                 return RedirectToAction("Index", "Home");
