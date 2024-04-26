@@ -11,7 +11,11 @@ builder.Services.AddDefaultIdentity<UserEntity>(x =>
     x.User.RequireUniqueEmail = true;
     x.SignIn.RequireConfirmedAccount = false;
     x.Password.RequiredLength = 8;
+    x.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);
+    x.Lockout.MaxFailedAccessAttempts = 3;
+    x.Lockout.AllowedForNewUsers = true;
 }).AddEntityFrameworkStores<DataContext>();
+
 
 
 var app = builder.Build();
