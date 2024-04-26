@@ -832,6 +832,7 @@ header .container #account-buttons {
   justify-content: center;
   text-align: center;
   gap: 70px;
+  color: #565973;
 }
 .integrate-tools .container .tool-container img {
   margin-bottom: 20px;
@@ -892,6 +893,15 @@ footer .container .social-images {
 .newsletter .container form .subscribe-email {
   display: flex;
   gap: 1rem;
+}
+.newsletter .container form .subscribe-email input {
+  padding: 10px;
+  padding-left: 3rem;
+  border-radius: 7px;
+  border: 1px solid #E2E5F1;
+  background-image: url(/images/icons/bx-envelope.svg);
+  background-position: 3%;
+  background-repeat: no-repeat;
 }
 .newsletter .container form p {
   line-height: 160%;
