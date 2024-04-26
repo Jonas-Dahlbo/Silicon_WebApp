@@ -14,11 +14,11 @@ namespace WebApp.Controllers
         [Route("/courses")]
         public IActionResult Index()
         {
-            if (!ModelState.IsValid)
+            if (ModelState.IsValid)
             {
                 if (!_signInManager.IsSignedIn(User))
                 {
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("SignIn", "Authentication");
                 }
                 var viewModel = new CoursesViewModel();
 
