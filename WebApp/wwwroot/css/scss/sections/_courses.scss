@@ -73,7 +73,8 @@
             .course-content {
                 margin-bottom: 10px;
                 border-radius: 15px;
-                border: 1px outset $gray-200;
+                border: 1px solid $gray-200;
+                @include shadow-s;
 
                 .image {
                     position: relative;
@@ -144,6 +145,50 @@
                             }
                         }
                     }
+                }
+            }
+        }
+    }
+}
+
+.work-with-us {
+    margin-bottom: 20px;
+
+    .center {
+        margin-top: 25px;
+        margin-bottom: 80px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .container {
+        background-color: $gray-100;
+
+        .get-started {
+            display: flex;
+            justify-content: space-between;
+            padding: 55px;
+
+            .section-text {
+                margin-top: 50px;
+                width: 41%;
+
+                p {
+                    @include text-lead;
+                    color: $gray-700;
+                    margin-bottom: 20px;
+                }
+
+                h1 {
+                    margin-bottom: 30px;
+                    
+                    span {
+                        color: $theme;
+                    }
+                }
+                .theme-btn {
+                    width: 35%;
                 }
             }
         }
