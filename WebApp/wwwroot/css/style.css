@@ -1158,12 +1158,16 @@ footer .container .social-images {
   font-weight: 400 !important;
   color: #565973;
   font-family: "Manrope", sans-serif;
+  margin-top: 20px;
 }
 .courses h1 {
   color: #0B0F19;
 }
 .courses h5 {
   color: #33354D;
+}
+.courses .container .courses-title-box {
+  margin-bottom: 25px;
 }
 .courses .container .courses-title-box .title {
   display: grid;
@@ -1177,10 +1181,13 @@ footer .container .social-images {
   padding-bottom: 20px;
 }
 .courses .container .courses-title-box .title .courses-nav p {
+  margin-left: 5px;
   margin-bottom: 0;
 }
 .courses .container .courses-title-box .title .courses-nav p i {
   font-size: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 .courses .container .courses-title-box .title .courses-nav p a {
   color: #6366F1;
@@ -1199,6 +1206,7 @@ footer .container .social-images {
   width: 15rem;
   border: 1px solid #E2E5F1;
   outline: none;
+  margin-right: 15px;
 }
 .courses .container .courses-title-box .title .search-box input {
   padding: 10px;
@@ -1299,7 +1307,7 @@ footer .container .social-images {
 }
 .work-with-us .container .get-started .section-text {
   margin-top: 50px;
-  width: 41%;
+  width: 40%;
 }
 .work-with-us .container .get-started .section-text p {
   line-height: 160%;
@@ -1318,6 +1326,9 @@ footer .container .social-images {
 }
 .work-with-us .container .get-started .section-text .theme-btn {
   width: 35%;
+}
+.work-with-us .container .get-started img {
+  padding-right: 50px;
 }
 
 #light-dark-mode {
