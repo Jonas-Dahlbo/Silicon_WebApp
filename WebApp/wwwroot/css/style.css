@@ -1268,6 +1268,47 @@ footer .container .social-images {
   margin-right: 5px;
 }
 
+.work-with-us {
+  margin-bottom: 20px;
+}
+.work-with-us .center {
+  margin-top: 25px;
+  margin-bottom: 80px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.work-with-us .container {
+  background-color: #F3F6FF;
+}
+.work-with-us .container .get-started {
+  display: flex;
+  justify-content: space-between;
+  padding: 55px;
+}
+.work-with-us .container .get-started .section-text {
+  margin-top: 50px;
+  width: 41%;
+}
+.work-with-us .container .get-started .section-text p {
+  line-height: 160%;
+  font-weight: 400 !important;
+  color: #565973;
+  font-family: "Manrope", sans-serif;
+  font-size: 24px !important;
+  color: #565973;
+  margin-bottom: 20px;
+}
+.work-with-us .container .get-started .section-text h1 {
+  margin-bottom: 30px;
+}
+.work-with-us .container .get-started .section-text h1 span {
+  color: #6366F1;
+}
+.work-with-us .container .get-started .section-text .theme-btn {
+  width: 35%;
+}
+
 #light-dark-mode {
   width: 100%;
 }
