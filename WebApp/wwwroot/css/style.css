@@ -955,14 +955,6 @@ footer .container .social-images {
 .sign-up .container form .account-checkbox .checkbox-group {
   gap: 10px;
 }
-.sign-up .container form .account-checkbox .checkbox-group label {
-  line-height: 160%;
-  font-weight: 400 !important;
-  color: #565973;
-  font-family: "Manrope", sans-serif;
-  font-size: 16px !important;
-  color: #565973;
-}
 .sign-up .container form button {
   font-size: 16px;
   font-weight: 400 !important;
