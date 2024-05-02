@@ -34,6 +34,11 @@
                 padding-top: 15px;
                 padding-bottom: 15px;
 
+                label {
+                    @include text-m;
+                    color: $gray-700;
+                }
+
                 .checkbox-group {
                     gap: 10px;
                 }

@@ -11,8 +11,37 @@
             border-right: 1px solid $gray-300;
 
             .profile {
-                align-items: center;
-                text-align: center;
+                .profile-image {
+                    align-items: center;
+                    text-align: center;
+                }
+            }
+
+            .profile-btns {
+                @include text-nav;
+
+
+                .account-btn {
+                    .theme-btn {
+                        justify-content: flex-start;
+                        text-decoration: none;
+                        font-size: 16px;
+                    }
+                }
+
+                .sign-out {
+                    margin-top: 5px;
+
+                    i {
+                        margin-right: 10px;
+                        margin-left: 25px;
+                    }
+
+                    a {
+                        text-decoration: none;
+                        color: $gray-800;
+                    }
+                }
             }
         }
 
@@ -37,13 +66,6 @@
                 padding: 10px;
                 border-radius: 7px !important;
                 border: 1px solid $gray-300 !important;
-            }
-
-            textarea {
-                padding: 10px;
-                border-radius: 7px !important;
-                border: 1px solid $gray-300 !important;
-                resize: none;
             }
 
             .basic-info {

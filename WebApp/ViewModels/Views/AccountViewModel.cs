@@ -26,7 +26,7 @@ public class AccountViewModel
 
     [Display(Name = "Bio", Prompt = "Add a short bio...")]
     [Required(ErrorMessage = "A valid Email Address must be entered")]
-    [DataType(DataType.MultilineText)]
+    [DataType(DataType.Text)]
     public string Bio { get; set; } = null!;
 
     [Display(Name = "Address line 1", Prompt = "Enter your address line")]
@@ -35,7 +35,7 @@ public class AccountViewModel
 
     [Display(Name = "Address line 2", Prompt = "Enter your second address line")]
     [DataType(DataType.Text)]
-    public string? SecondaryAddress { get; set; } 
+    public string? SecondaryAddress { get; set; }
 
     [Display(Name = "Postal code", Prompt = "Enter your postal code")]
     [DataType(DataType.Text)]
@@ -45,5 +45,5 @@ public class AccountViewModel
     [DataType(DataType.Text)]
     public string City { get; set; } = null!;
 
-    public ImageViewModel ProfileImage { get; set; } = new() { ImageUrl = "images/profile-mid.svg", ImageAlt = "Profile picture"};
+    public ImageViewModel ProfileImage { get; set; } = new() { ImageUrl = "images/profile-mid.svg", ImageAlt = "Profile picture" };
 }

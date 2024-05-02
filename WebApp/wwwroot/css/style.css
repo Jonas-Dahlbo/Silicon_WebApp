@@ -310,28 +310,6 @@ h6, .h6 {
   border-radius: 50%;
 }
 
-.social-btn {
-  line-height: 160%;
-  font-weight: 400 !important;
-  color: #565973;
-  font-family: "Manrope", sans-serif;
-  font-size: 20px !important;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 8px;
-  width: 44px;
-  height: 44px;
-  background-color: #EFF2FC;
-  color: #33354D;
-  text-decoration: none;
-  cursor: pointer;
-}
-.social-btn:hover {
-  background: #565973;
-  color: #FFFFFF;
-}
-
 a {
   line-height: 160%;
   font-weight: 400 !important;
@@ -957,6 +935,14 @@ footer .container .social-images {
   padding-top: 15px;
   padding-bottom: 15px;
 }
+.sign-up .container form .account-checkbox label {
+  line-height: 160%;
+  font-weight: 400 !important;
+  color: #565973;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px !important;
+  color: #565973;
+}
 .sign-up .container form .account-checkbox .checkbox-group {
   gap: 10px;
 }
@@ -995,6 +981,14 @@ footer .container .social-images {
   padding-top: 15px;
   padding-bottom: 15px;
 }
+.sign-in .container form .remember-me label {
+  line-height: 160%;
+  font-weight: 400 !important;
+  color: #565973;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px !important;
+  color: #565973;
+}
 .sign-in .container form .remember-me .checkbox-group {
   gap: 10px;
 }
@@ -1032,9 +1026,34 @@ footer .container .social-images {
   padding-right: 5px;
   border-right: 1px solid #E2E5F1;
 }
-.profile-page .container .account-management .profile {
+.profile-page .container .account-management .profile .profile-image {
   align-items: center;
   text-align: center;
+}
+.profile-page .container .account-management .profile-btns {
+  line-height: 160%;
+  font-weight: 400 !important;
+  color: #565973;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  color: #33354D;
+  font-weight: 600 !important;
+}
+.profile-page .container .account-management .profile-btns .account-btn .theme-btn {
+  justify-content: flex-start;
+  text-decoration: none;
+  font-size: 16px;
+}
+.profile-page .container .account-management .profile-btns .sign-out {
+  margin-top: 5px;
+}
+.profile-page .container .account-management .profile-btns .sign-out i {
+  margin-right: 10px;
+  margin-left: 25px;
+}
+.profile-page .container .account-management .profile-btns .sign-out a {
+  text-decoration: none;
+  color: #33354D;
 }
 .profile-page .container .account-details {
   padding-left: 40px;
@@ -1057,12 +1076,6 @@ footer .container .social-images {
   padding: 10px;
   border-radius: 7px !important;
   border: 1px solid #E2E5F1 !important;
-}
-.profile-page .container .info-form textarea {
-  padding: 10px;
-  border-radius: 7px !important;
-  border: 1px solid #E2E5F1 !important;
-  resize: none;
 }
 .profile-page .container .info-form .basic-info {
   display: grid;
