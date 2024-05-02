@@ -61,6 +61,11 @@
 
                 .checkbox-group {
                     gap: 10px;
+
+                    label {
+                        @include text-m;
+                        color: $gray-700;
+                    }
                 }
             }
 

@@ -8,13 +8,15 @@
     <div class="container">
         <div class="account-management">
             <div class="profile">
-                <img src="@Model.ProfileImage.ImageUrl" alt="@Model.ProfileImage.ImageAlt">
-                <h5>@Model.FirstName</h5>
-                <p>@Model.Email</p>
+                <div class="profile-image">
+                    <img src="@Model.ProfileImage.ImageUrl" alt="@Model.ProfileImage.ImageAlt">
+                    <h5>@Model.FirstName</h5>
+                    <p>@Model.Email</p>
+                </div>
             </div>
             <div class="profile-btns">
-                <a class="theme-btn" href="#"><i class="fal fa-cog"></i>Account Details</a>
-                <a id="sign-out" asp-controller="Authentication" asp-action="SignOut"><i class="fa-regular fa-arrow-left-from-bracket"></i> Sign Out</a>
+                <div class="account-btn"><a class="theme-btn" href="#"><i class="fal fa-cog"></i>Account Details</a></div>
+                <div class="sign-out"><a asp-controller="Authentication" asp-action="SignOut"><i class="fa-regular fa-arrow-left-from-bracket"></i> Sign Out</a></div>
             </div>
         </div>
 
@@ -47,8 +49,8 @@
                     </div>
                 </div>
                 <div class="save-changes">
-                    <button class="gray-btn" asp-controller="Profile" asp-action="Account">Cancel</button>
-                    <button class="theme-btn" asp-controller="Profile" asp-action="Update">Save changes</button>
+                    <button class="gray-btn" type="reset">Cancel</button>
+                    <button class="theme-btn" asp-controller="Profile" asp-action="UpdateBasicInfo">Save changes</button>
                 </div>
             </form>
             <form class="address-form" method=post>
@@ -73,8 +75,8 @@
                     </div>
                 </div>
                 <div class="save-changes">
-                    <button class="gray-btn" asp-controller="Profile" asp-action="Account">Cancel</button>
-                    <button class="theme-btn" asp-controller="Profile" asp-action="Update">Save changes</button>
+                    <button class="gray-btn" type="reset">Cancel</button>
+                    <button class="theme-btn" asp-controller="Profile" asp-action="UpdateAddress">Save changes</button>
                 </div>
             </form>
         </div>

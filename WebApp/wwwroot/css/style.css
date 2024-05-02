@@ -955,6 +955,14 @@ footer .container .social-images {
 .sign-up .container form .account-checkbox .checkbox-group {
   gap: 10px;
 }
+.sign-up .container form .account-checkbox .checkbox-group label {
+  line-height: 160%;
+  font-weight: 400 !important;
+  color: #565973;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px !important;
+  color: #565973;
+}
 .sign-up .container form button {
   font-size: 16px;
   font-weight: 400 !important;
@@ -1027,9 +1035,34 @@ footer .container .social-images {
   padding-right: 5px;
   border-right: 1px solid #E2E5F1;
 }
-.profile-page .container .account-management .profile {
+.profile-page .container .account-management .profile .profile-image {
   align-items: center;
   text-align: center;
+}
+.profile-page .container .account-management .profile-btns {
+  line-height: 160%;
+  font-weight: 400 !important;
+  color: #565973;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  color: #33354D;
+  font-weight: 600 !important;
+}
+.profile-page .container .account-management .profile-btns .account-btn .theme-btn {
+  justify-content: flex-start;
+  text-decoration: none;
+  font-size: 16px;
+}
+.profile-page .container .account-management .profile-btns .sign-out {
+  margin-top: 5px;
+}
+.profile-page .container .account-management .profile-btns .sign-out i {
+  margin-right: 10px;
+  margin-left: 25px;
+}
+.profile-page .container .account-management .profile-btns .sign-out a {
+  text-decoration: none;
+  color: #33354D;
 }
 .profile-page .container .account-details {
   padding-left: 40px;
