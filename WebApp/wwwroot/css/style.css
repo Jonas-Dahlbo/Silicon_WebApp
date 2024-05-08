@@ -889,6 +889,12 @@ footer .container .social-images {
   font-size: 14px !important;
   color: #9397AD;
 }
+.newsletter .container form .status-success {
+  color: #22C55E;
+}
+.newsletter .container form .status-fail {
+  color: #EF4444;
+}
 
 .sign-up .container {
   padding-top: 100px;

@@ -54,6 +54,14 @@
                 @include text-s;
                 color: $gray-600;
             }
+
+            .status-success {
+                color: $success;
+            }
+
+            .status-fail {
+                color: $danger;
+            }
         }
     }
 }

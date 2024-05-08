@@ -1,10 +1,15 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
+using System.Text;
+using WebApp.Models.Sections;
 using WebApp.Models.Views;
 
 namespace WebApp.Controllers;
 
-public class HomeController : Controller
+public class HomeController(HttpClient httpClient) : Controller
 {
+    private readonly HttpClient _httpClient = httpClient;
+
     [HttpGet]
     public IActionResult Index()
     {
@@ -12,5 +17,28 @@ public class HomeController : Controller
 
         ViewData["Title"] = viewModel.Title;
         return View(viewModel);
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> Subscribe(NewsletterViewModel model)
+    {
+
+        var content = new StringContent(JsonConvert.SerializeObject(model.Subscribe), Encoding.UTF8, "application/json");
+        var response = await _httpClient.PostAsync("https://localhost:7187/api/subscribe?key=ZjA5MGQ5ZmEtZGJlNy00ZmFiLTg2MTgtZGU0NzI0YWI4ODRk", content);
+
+        if (response.IsSuccessStatusCode)
+        {
+            TempData["StatusMessage"] = "You are now subscribed";
+        }
+        else if (response.StatusCode == System.Net.HttpStatusCode.Conflict)
+        {
+            TempData["StatusMessage"] = "You are already subscribed";
+        }
+        else
+        {
+            TempData["StatusMessage"] = "Something went wrong";
+        }
+
+        return RedirectToAction("Index", "Home", "Newsletter");
     }
 }

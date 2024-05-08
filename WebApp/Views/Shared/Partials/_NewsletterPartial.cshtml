@@ -6,34 +6,69 @@
             <h1>@Model.Title</h1>
             <img src="@Model.Image.ImageUrl" alt="@Model.Image.ImageAlt">
         </div>
-        <form method="post">
+        <form asp-action="Subscribe" asp-controller="Home">
             <div class="news-box">
                 <h5>@Model.FormTitle</h5>
 
 
                 <div class="newsletter-group">
-                    @{int checkboxCount = 1;
-                    foreach(var checkbox in Model.CheckboxText)
-                    {
-                        <div class="newsletter-checkbox">
-                            <div class="checkbox-group">
-                                <input type="checkbox" name="checkbox_@checkboxCount">
-                                <label for="checkbox_@checkboxCount">@checkbox</label>
-                            </div>
-                            </div>
-                            checkboxCount += 1;
-                        }
-                    }
+                    <div class="newsletter-checkbox">
+                        <div class="checkbox-group">
+                            <input asp-for="Subscribe.DailyNewsletter">
+                            <label asp-for="Subscribe.DailyNewsletter"></label>
+                        </div>
+                    </div>
+                    <div class="newsletter-checkbox">
+                        <div class="checkbox-group">
+                            <input asp-for="Subscribe.AdvertisingUpdates">
+                            <label asp-for="Subscribe.AdvertisingUpdates"></label>
+                        </div>
+                    </div>
+                    <div class="newsletter-checkbox">
+                        <div class="checkbox-group">
+                            <input asp-for="Subscribe.WeekinReview">
+                            <label asp-for="Subscribe.WeekinReview"></label>
+                        </div>
+                    </div>
+                    <div class="newsletter-checkbox">
+                        <div class="checkbox-group">
+                            <input asp-for="Subscribe.EventUpdates">
+                            <label asp-for="Subscribe.EventUpdates"></label>
+                        </div>
+                    </div>
+                    <div class="newsletter-checkbox">
+                        <div class="checkbox-group">
+                            <input asp-for="Subscribe.StarupsWeekly">
+                            <label asp-for="Subscribe.StarupsWeekly"></label>
+                        </div>
+                    </div>
+                    <div class="newsletter-checkbox">
+                        <div class="checkbox-group">
+                            <input asp-for="Subscribe.Podcasts">
+                            <label asp-for="Subscribe.Podcasts"></label>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div class="subscribe-email">
                 <div class="input-group">
-                    <input type="text" placeholder="@Model.Placeholder">
+                    <input asp-for="Subscribe.Email">
                 </div>
-                <button class="@Model.Button.LinkType" type="submit">@Model.Button.LinkText</button>
+                <button type="submit" class="@Model.Button.LinkType">@Model.Button.LinkText</button>
             </div>
             <p>* Yes, I agree to the <a target="_blank" href="#">terms</a> and <a target="_blank" href="#">privacy policy.</a></p>
+            @if (!string.IsNullOrEmpty(TempData["StatusMessage"]?.ToString()))
+            {
+                if (TempData["StatusMessage"]?.ToString() == "You are now subscribed")
+                {
+                    <span class="status-success">@TempData["StatusMessage"]</span>
+                }
+                else
+                {
+                    <span class="status-fail">@TempData["StatusMessage"]</span>
+                }
+            }
         </form>
     </div>
 </section>
